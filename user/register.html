@@ -1,0 +1,436 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="../css/reset.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="../css/default1.css">
+<link rel="stylesheet" href="../fonts/font-awesome-4.5.0/css/font-awesome.min.css">
+
+<title>Register</title>
+</head>
+
+<body>
+	<div id="wrapper">
+    	<aside id="sidebar">
+            <!--<div><a href="javascript:void(0);" onclick="hideSidebar()" id="fixed-toggle-btn" class="sticky-block">&equiv;</a></div>
+            -->
+            <div class="col-zero">
+                <div class="social">
+                    <a href="javascript:void(0);"><i class="fa fa-facebook"></i></a>
+                    <a href="javascript:void(0);"><i class="fa fa-google-plus"></i></a>
+                    <a href="javascript:void(0);"><i class="fa fa-twitter"></i></a>
+                </div>
+                <div id="user-info">
+                    <figure>
+                        <img src="../images/basketball.png" id="profile-pic" alt="profile-picture"/>
+                    </figure>
+                    <figcaption> User Name </figcaption>
+                    <a href=""><i class="fa fa-cog"></i> Edit Profile</a>
+                    <a href=""><i class="fa fa-cog"></i> Settings</a>
+                </div>
+                <br>
+                <div id="items-list">
+                    <button id="wishlist-btn"><i class="fa fa-heart"></i><br>Your Wish List</button>
+                    <button id="cart-btn"><i class="fa fa-shopping-cart"></i><br>Shopping Cart</button>
+                </div>
+                <div id="filter-btn">
+                    <button onclick="goSecondCol('filters-block')"><i class="fa fa-filter"></i> Filters <i class="fa fa-arrow-circle-right context-right-open clearfix"></i></button>
+                </div>
+                <br>
+                <div id="filter-btn1">
+                    <button onclick="goThirdCol('demo-filters-block')">Demo Filters &rArr;</button>
+                </div>
+                <nav id="general-nav">
+                    <ul>
+                        <li><a href="#"> Home <i class="fa fa-home"></i></a></li>
+                        <li><a href="#"> About <i class="fa fa-info-circle"></i></a></li>
+                        <li><a href="#">  Contact <i class="fa fa-envelope-square"></i></a></li>
+                        <li><a href="#">Privacy <i class="fa fa-briefcase"></i></a></li>
+                    </ul>
+                </nav>
+                
+                <div id="main-footer">
+                    <p id="copyright">
+                      &nbsp;Explore Hisar <i class="fa fa-copyright"></i> 2016 All rights reserved.
+                    </p>
+                </div>
+            </div>
+        	<div class="col-one">
+                <div id="col-go-back"><button onclick="goFirstCol()"><i class="fa fa-arrow-left"></i></button></div>
+                <div id="filters-block" class="default-hiddn">
+                    <form>
+                        <fieldset>
+                            <h2>Filter 1</h2>
+                            <label>label 1</label>
+                            <input type="number" width="50px"/>
+                        </fieldset>
+                        <fieldset>
+                            <h2>Filter 2</h2>
+                            <label>label 2</label>
+                            <input type="radio" width="50px"/>
+                            <label>label 3</label>
+                            <input type="radio" width="50px"/>
+                        </fieldset>
+                        <fieldset>
+                            <h2>Filter 3</h2>
+                            <label>label 3</label>
+                            <input type="range" step="10" min="10" max="100"/>
+                        </fieldset>
+                        <fieldset>
+                            <h2>Filter 3</h2>
+                            <label>label 3</label>
+                            <input type="range" step="10" min="10" max="100"/>
+                        </fieldset>
+                        <fieldset>
+                            <h2>Filter 3</h2>
+                            <label>label 3</label>
+                            <input type="range" step="10" min="10" max="100"/>
+                        </fieldset>
+                        <fieldset>
+                            <h2>Filter 3</h2>
+                            <label>label 3</label>
+                            <input type="range" step="10" min="10" max="100"/>
+                        </fieldset>
+                        <fieldset>
+                            <h2>Filter 3</h2>
+                            <label>label 3</label>
+                            <input type="range" step="10" min="10" max="100"/>
+                        </fieldset>
+                        <fieldset>
+                            <h2>Filter 3</h2>
+                            <label>label 3</label>
+                            <input type="range" step="10" min="10" max="100"/>
+                        </fieldset>
+                        <fieldset>
+                            <h2>Filter 4</h2>
+                            <label>label 4</label>
+                            <input type="checkbox"/>
+                            <br>
+                            <label>label 4</label>
+                            <input type="checkbox"/>
+                            <br>
+                            <label>label 4</label>
+                            <input type="checkbox"/>
+                            <br>
+                            <label>label 4</label>
+                            <input type="checkbox"/>
+                            <br>
+                            <label>label 4</label>
+                            <input type="checkbox"/>
+                        </fieldset>
+                        <fieldset>
+                            <h2>Filter 5</h2>
+                            <label>label 5<input type="radio" name="a" value="0"/></label>
+                            <label>label 5<input type="radio" name="a" value="0"/></label>
+                            <label>label 5<input type="radio" name="a" value="0"/></label>
+                            
+                        </fieldset>
+                        <div>
+                            <input type="submit" value="search"/>
+                            <input type="reset" value="clear"/>
+                            <br>
+                            <br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-two">
+                <div id="col-go-back"><button onclick="goFirstCol()"><i class="fa fa-arrow-left"></i></button></div>
+                <div id="filters-block" class="default-hiddn">
+                    <form>
+                        <fieldset>
+                            <h2>Faltu 1</h2>
+                            <label>label 1</label>
+                            <input type="number" width="50px"/>
+                        </fieldset>
+                        <fieldset>
+                            <h2>Fultu 2</h2>
+                            <label>label 2</label>
+                            <input type="radio" width="50px"/>
+                            <label>label 3</label>
+                            <input type="radio" width="50px"/>
+                        </fieldset>
+                        <fieldset>
+                            <h2>Filter 3</h2>
+                            <label>label 3</label>
+                            <input type="range" step="10" min="10" max="100"/>
+                        </fieldset>
+                        <fieldset>
+                            <h2>Filter 3</h2>
+                            <label>label 3</label>
+                            <input type="range" step="10" min="10" max="100"/>
+                        </fieldset>
+                        <fieldset>
+                            <h2>Filter 3</h2>
+                            <label>label 3</label>
+                            <input type="range" step="10" min="10" max="100"/>
+                        </fieldset>
+                        <fieldset>
+                            <h2>Filter 3</h2>
+                            <label>label 3</label>
+                            <input type="range" step="10" min="10" max="100"/>
+                        </fieldset>
+                        <fieldset>
+                            <h2>Filter 3</h2>
+                            <label>label 3</label>
+                            <input type="range" step="10" min="10" max="100"/>
+                        </fieldset>
+                        <fieldset>
+                            <h2>Filter 3</h2>
+                            <label>label 3</label>
+                            <input type="range" step="10" min="10" max="100"/>
+                        </fieldset>
+                        <fieldset>
+                            <h2>Filter 4</h2>
+                            <label>label 4</label>
+                            <input type="checkbox"/>
+                            <br>
+                            <label>label 4</label>
+                            <input type="checkbox"/>
+                            <br>
+                            <label>label 4</label>
+                            <input type="checkbox"/>
+                            <br>
+                            <label>label 4</label>
+                            <input type="checkbox"/>
+                            <br>
+                            <label>label 4</label>
+                            <input type="checkbox"/>
+                        </fieldset>
+                        <fieldset>
+                            <h2>Filter 5</h2>
+                            <label>label 5</label>
+                            <input type="radio" value="0"/>
+                            <label>label 5</label>
+                            <input type="radio" value="0"/>
+                            <label>label 5</label>
+                            <input type="radio" value="0"/>
+                        </fieldset>
+                        <div>
+                            <input type="submit" value="search"/>
+                            <input type="reset" value="clear"/>
+                            <br>
+                            <br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </aside>
+        
+        
+        <header id="sticky-bar" class="clearfix">
+            <a href="javascript:void(0);" onclick="hideSidebar()" id="toggle-btn" class="sticky-block">&equiv;</a>
+            
+            <a href="javascript:void(0);" id="logo" class="sticky-block"><span style="font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#FB9E07">eh</span> <span class="hide-on-xsmall">Explore H!sar</span></a>
+
+            <div id="site-domain" class="dropdown-menu sticky-block domain-dropbtn">
+                <button><span class="hide-on-small">choose domain&nbsp;&nbsp;</span><span id="dropdown-bracket"><i class="fa fa-chevron-down"></i></span></button>
+                <ul class="default-hidden dropdown-content">
+                    <li><a href="#">Restaurant</a></li>
+                    <li><a href="#">Venue</a></li>
+                    <li><a href="#">Hotel</a></li>
+                </ul>
+            </div>
+
+            <a href="javascript:void(0);" class="sticky-block sticky-btn" id="search-btn" onclick="toggleMenu('sticky-search')"><i class="fa fa-search"></i></a>
+            
+            <a href="javascript:void(0);" class="sticky-block sticky-btn hide-on-xsmall" id="sign-in-btn" onclick="toggleMenu('sign-in')"><i class="fa fa-user"></i><i class="hide-on-small">&nbsp;&nbsp;sign in</i></a>
+            
+            <article id="sticky-search"  class="default-hidden dropdown-content">
+                <a href="javascript:void(0);" id="close-search" class="cross cross-light hide-on-small" onclick="toggleMenu('sticky-search')"><i class="fa fa-close"></i></a>
+                
+                <section id="search-bar-container">
+                    <form id="search-bar" action="self" method="get">
+                        <input type="search" name="search" id="main-search" placeholder="search...">
+                        <select name="search-domain" id="search-domain">
+                            <option value="choose domain">choose domain</option>
+                            <option value="restaurant">restaurant</option>
+                            <option value="venue">venue</option>
+                            <option value="hotel">hotel</option>
+                        </select><!--
+                        <input type="submit" value="search" id="search-icon">-->
+                        <button type="submit" id="search-icon"><i class="fa fa-search"></i></button>
+                    </form>
+                </section>
+            </article>
+        </header>
+
+        <article id="sign-in" class="modal-box">
+            <form>
+                <a href="javascript:void(0);" class="cross cross-dark" onclick="toggleMenu('sign-in')"><i class="fa fa-close"></i></a>
+                <!--
+                <div id="sign-in-user">
+                    <i class="fa fa-user"></i>
+                </div>-->
+                <div id="sign-in-using"><!--
+                    <p>sign in using </p>--><br>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+                
+                <div class="or-separator dark-separator">
+                    <hr>
+                    <span>or</span>
+                </div>
+                
+                
+                <fieldset>
+                    <input type="text" placeholder="enter username" name="username"  class="text-field"/>
+                    <br><br>
+                    <input type="password" placeholder="enter password" name="password" class="text-field"/>
+                    <br>
+                    <input type="submit" name="sign in" id="log-in-btn" value="log in" class="sign-in-ctrls" />  
+                    <br>
+                    <a id="sign-in-forgot" href="javascript:void(0);">Forgot password?</a>
+                </fieldset>
+                
+                <div class="or-separator dark-separator">
+                    <hr>
+                    <span>or</span>
+                </div>
+                
+                <div id="sign-in-up">
+                    <label>create new account</label>
+                    <input type="button" name="sign-up" value="sign up" id="sign-up-btn" class="sign-in-ctrls" />
+                </div>
+            </form>
+        </article>
+ 
+        <section id="container">
+            <main id="content">
+                <div id="sign-up-wrapper">
+                    <h1 class="hide-on-small">Sign up!</h1>
+                    
+                    <div id="sign-up-using">
+                        <p>Sign Up using:</p>
+                        <a href="#"><i class="fa fa-facebook"></i><i>facebook</i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i><i>facebook</i></a>
+                        <a href="#"><i class="fa fa-twitter"></i><i>facebook</i></a>
+                    </div>
+                    
+                    <div class="or-separator light-separator">
+                        <hr>
+                        <span>or</span>
+                    </div>
+                    
+                    <div id="sign-up-form">
+                        <form>
+                            <fieldset id="choose-profile-pic">
+                                <div id="input-profile-pic">
+                                    <div>
+                                        <input type="hidden" name="MAX_FILE_SIZE" value="500000">
+                                        <input type="file" accept="image/*" name="profile-pic" required="" id="file-profile-pic">
+                                    </div>
+                                </div>
+                            </fieldset>
+                            
+                            <fieldset>
+                                <div>
+                                    <span><i class="fa fa-user"></i></span>
+                                    <input type="text" name="username"  class="text-field" required="" placeholder="username"/>    
+                                </div>
+                                <!--<div>
+                                    <span><i class="fa fa-calendar"></i></span>
+                                    <input type="date" name="username" required="" class="text-field"/>
+                                </div>
+                                <div>
+                                    <label>
+                                        <span><i class="fa fa-male"></i></span>
+                                        <input type="radio" name="gender" value="m"> male
+                                    </label>&nbsp;&nbsp;&nbsp;
+                                    <label>
+                                        <span><i class="fa fa-female"></i></span>
+                                        <input type="radio" name="gender" value="f"> female
+                                    </label>&nbsp;&nbsp;&nbsp;
+                                    <label>
+                                        <span><i class="fa fa-transgender-alt"></i></span>
+                                        <input type="radio" name="gender" value="o"> other
+                                    </label>
+                                </div>
+-->
+                                <div>
+                                    <span><i class="fa fa-envelope"></i></span>
+                                    <input type="email" name="email" required="" class="text-field" placeholder="e-mail" pattern="[a‐z0‐9._%+‐]+@[a‐z0‐9.‐]+\.[a‐z]{2,3}$" title="enter valid email address"/>  
+                                </div>
+                                
+<!--
+                                <div>
+                                    <span><i class="fa fa-mobile"></i></span>&nbsp;
+                                    +91 -
+                                    <input type="tel" name="mobile" required="" class="text-field" placeholder="xx-xxxx-xxxx" pattern="[0-9]{10}" title="enter 10 digit mobile number"/>
+                                </div>
+-->
+
+                                <div>
+                                    <span><i class="fa fa-lock"></i></span>
+                                    <input type="password" name="password" required="" class="text-field" placeholder="password"/>   
+                                </div>
+
+                                <div>
+                                    <span><i class="fa fa-lock"></i></span>
+                                    <input type="password" name="retype-password" required="" class="text-field"  placeholder="retype password"/>
+                                </div>
+                            </fieldset>
+                            <div>/* Use Google Recaptcha */</div>
+                            <div id="sign-up-submit">
+                                <button type="submit" name="sign-up-submit">
+                                    <i class="fa fa-user-plus"></i> Sign up </button>
+                                <p>Already have an account? 
+                                <a href="#" onclick="signInMenu()">sign in</a></p>
+                                <br>
+                                <p><i class="fa fa-info-circle"></i>
+                                By clicking Sign Up, you agree to our <a href="#">Terms</a> and that you have read our <a href="">Data Policy</a>, including our Cookie Use.</p>
+                            </div>
+                        </form>
+                    </div>
+                    
+                </div>
+            </main>
+            <aside id="misc-sidebar" class="hide-on-med">
+                <div>
+                    <h1>Popular Posts</h1>
+                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1 description is present here </p>
+                </div>
+                <div>
+                    <h1>Popular Posts</h1>
+                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1 description is present here </p>
+                </div>
+                <div>
+                    <h1>Popular Posts</h1>
+                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1 description is present here </p>
+                </div>
+                <div>
+                    <h1>Popular Posts</h1>
+                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1 description is present here </p>
+                </div>
+                <div>
+                    <h1>Popular Posts</h1>
+                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1 description is present here </p>
+                </div>
+                <div>
+                    <h1>Popular Posts</h1>
+                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1 description is present here </p>
+                </div>
+            </aside>
+        </section>
+    </div>
+    
+    
+    <script >
+        
+        var isHiddenSidebar = true;
+        /*
+        // put optionally on the pages where you want the sidebar open by default
+        
+        isHiddenSidebar = function setBool() {
+            if (innerWidth >= 1280)
+                isHiddenSidebar = false;
+            return isHiddenSidebar;
+        }();*/
+    </script>
+    
+    <script src="../scripts/default.js"></script>
+</body>
+</html>

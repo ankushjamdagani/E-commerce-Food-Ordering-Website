@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Venues || Explore Hisar</title>
+<link rel="stylesheet" type="text/css" href="../css/sticky.css">
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+</head>
+<body>
+	<div id="wrapper">
+    	<div id="sticky-header">
+			<a id="toggle-btn" class="sticky-block" href="javascript:void(0);" onclick="toggleMenu()">
+                &#9776;<!--<span class="show-on-small pull-right" id="menu-text">Menu</span>--></a>
+         <!--   <nav id="main-nav" class="default-hidden full-modal-box">
+                <a  href="javascript:void(0);" class="cross hide-on-small" onclick="toggleMenu()">&times;</a>
+                <div class="absolute-vertical-center horizontal-center nav-style default-pos">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);">Home</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Features</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">About</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Contact</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Policy</a>
+                        </li>
+                    </ul>    
+                </div>
+
+            </nav>-->
+            <a id="logo" class="sticky-block" href="javascript:void(0);">Explore His<span style="color: #f44; font-size: 1.2em;">&and;</span>r</a>
+            <a id="sign-int-btn" class="sticky-block pull-right" href="javascript:void(0);" onclick="signInMenu()">sign in | up</a>
+        </div>
+        <div id="main-search">
+            <form>
+                <input type="search" name="search-box" id="search-box" placeholder="enter search..." class="main-search-item" maxlength="50" width="50" />
+                <select id="search-domain" class="main-search-item">
+                    <option selected>select domain</option>
+                    <option>Restaurant</option>
+                    <option>Hotel</option>
+                    <option>Venue</option>
+                </select>
+                <input type="submit" name="search-btn" id="search-btn" value="SEARCH" class="main-search-item" />
+            </form>
+        </div>
+        <div id="sign-in" class="default-hidden full-modal-box">
+        	<a href="javascript:void(0);" class="cross hide-on-small" onclick="signInMenu()">&times;</a>
+            <form id="sign-in-form" class="absolute-vertical-center horizontal-center default-pos">
+                <fieldset>
+                    <br>
+                    <input type="text" placeholder="enter username" name="username"  class="text-field"/>
+                    <br>
+                    <br>
+                    <input type="password" placeholder="enter password" name="password" class="text-field"/>
+                    <br>
+                    <input type="button" name="sign-up" value="sign up" id="sign-up-btn" class="sign-in-ctrls" />
+                    <input type="submit" name="sign in" id="log-in-btn" value="log in" class="sign-in-ctrls" />
+                    <a id="sign-in-forgot" href="javascript:void(0);">Forgot password?</a>  
+                </fieldset>
+            </form>
+        </div>
+        <aside id="sidebar-filter" style="color: #fff;">
+            <h1>Filters</h1>
+            <p>filters are placed here.</p>
+        </aside>
+        <content id="main-content">
+            <h1>Heading</h1>
+            <p>This is some sample text</p>
+        </content>
+    </div>
+    <script>
+        function toggleMenu()
+        {
+            var mainNav = document.querySelector("#main-nav");
+            if(mainNav.style.display == "block")
+                mainNav.style.display = "none";
+            else
+                mainNav.style.display = "block";
+        }
+        
+        function signInMenu()
+        {
+            var signIn = document.querySelector("#sign-in");
+            
+            if(signIn.style.display == "block")
+                signIn.style.display = "none";
+            else
+                signIn.style.display = "block";
+        }
+    </script>
+    </body>
+</html>

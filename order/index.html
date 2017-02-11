@@ -1,0 +1,1013 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="../css/reset.css" type="text/css">
+<link rel="stylesheet" href="../css/order.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="../css/default1.css">
+<link rel="stylesheet" href="../fonts/font-awesome-4.5.0/css/font-awesome.min.css">
+    
+<title>Order</title>
+</head>
+
+<body>
+	<div id="wrapper">
+        <aside id="sidebar"></aside>
+
+        <header id="sticky-bar" class="clearfix">
+            <a href="javascript:void(0);" onclick="hideSidebar()" id="toggle-btn" class="sticky-block">&equiv;</a>
+            
+            <a href="javascript:void(0);" id="logo" class="sticky-block"><span style="font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#FB9E07">eh</span> <span class="hide-on-xsmall">Explore H!sar</span></a>
+
+            <div id="site-domain" class="dropdown-menu sticky-block domain-dropbtn">
+                <button><span class="hide-on-small">choose domain&nbsp;&nbsp;</span><span id="dropdown-bracket"><i class="fa fa-chevron-down"></i></span></button>
+                <ul class="default-hidden dropdown-content">
+                    <li><a href="#">Restaurant</a></li>
+                    <li><a href="#">Venue</a></li>
+                    <li><a href="#">Hotel</a></li>
+                </ul>
+            </div>
+
+            <a href="javascript:void(0);" class="sticky-block sticky-btn" id="search-btn" onclick="toggleMenu('sticky-search')"><i class="fa fa-search"></i></a>
+            
+            <a href="javascript:void(0);" class="sticky-block sticky-btn hide-on-xsmall" id="sign-in-btn" onclick="toggleMenu('sign-in')"><i class="fa fa-user"></i><i class="hide-on-small">&nbsp;&nbsp;sign in</i></a>
+            
+            <article id="sticky-search"  class="default-hidden dropdown-content">
+                <a href="javascript:void(0);" id="close-search" class="cross cross-light hide-on-small" onclick="toggleMenu('sticky-search')"><i class="fa fa-close"></i></a>
+                
+                <section id="search-bar-container">
+                    <form id="search-bar" action="self" method="get">
+                        <input type="search" name="search" id="main-search" placeholder="search...">
+                        <select name="search-domain" id="search-domain">
+                            <option value="choose domain">choose domain</option>
+                            <option value="restaurant">restaurant</option>
+                            <option value="venue">venue</option>
+                            <option value="hotel">hotel</option>
+                        </select><!--
+                        <input type="submit" value="search" id="search-icon">-->
+                        <button type="submit" id="search-icon"><i class="fa fa-search"></i></button>
+                    </form>
+                </section>
+            </article>
+        </header>
+
+        <article id="sign-in" class="modal-box">
+            <form>
+                <a href="javascript:void(0);" class="cross cross-dark" onclick="toggleMenu('sign-in')"><i class="fa fa-close"></i></a>
+                <!--
+                <div id="sign-in-user">
+                    <i class="fa fa-user"></i>
+                </div>-->
+                <div id="sign-in-using"><!--
+                    <p>sign in using </p>--><br>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+                
+                <div class="or-separator dark-separator">
+                    <hr>
+                    <span>or</span>
+                </div>
+                
+                <fieldset>
+                    <input type="text" placeholder="enter username" name="username"  class="text-field"/>
+                    <br><br>
+                    <input type="password" placeholder="enter password" name="password" class="text-field"/>
+                    <br>
+                    <input type="submit" name="sign in" id="log-in-btn" value="log in" class="sign-in-ctrls" />  
+                    <br>
+                    <a id="sign-in-forgot" href="javascript:void(0);">Forgot password?</a>
+                </fieldset>
+                
+                <div class="or-separator dark-separator">
+                    <hr>
+                    <span>or</span>
+                </div>
+                
+                <div id="sign-in-up">
+                    <label>create new account</label>
+                    <input type="button" name="sign-up" value="sign up" id="sign-up-btn" class="sign-in-ctrls" />
+                </div>
+            </form>
+        </article>
+        
+        <article id="fixed-control">
+            <a id="fixed-control-btn" href="javascript:void(0);" onclick="toggleMenu('fc-container')"><i class="fa fa-plus"></i></a>
+            <div id="fc-container" class="modal-box">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0);"><i class="fa fa-heart"></i>&nbsp;&nbsp;&nbsp;Wish List</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);"><i class="fa fa-opencart"></i>&nbsp;&nbsp;&nbsp;Cart</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);"><i class="fa fa-pencil"></i>&nbsp;&nbsp;&nbsp;Feedback</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);"><i class="fa fa-opencart"></i>&nbsp;&nbsp;&nbsp;Cart</a>
+                    </li>
+                </ul>    
+            </div>
+        </article>
+        
+        <article id="shopping-cart" class="modal-box">
+            <div>
+                <a href="javascript:void(0);" id="close-search" class="cross cross-light" onclick="toggleMenu('shopping-cart')"><i class="fa fa-close"></i></a>
+                
+                <h1>Shopping Cart <span>[ 2 ITEMS ] </span></h1>
+                
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Item Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="cart-item">
+                                    <figure>
+                                        <img src="../images/42w_0.png" width="80" height="auto" />
+                                    </figure>
+                                    <figcaption>
+                                        <h1>Name of the item</h1>
+                                        <p>Optionally some details about the item</p>
+                                    </figcaption>
+                                    <div>
+                                        <a href="#">Move to wishlist</a>
+                                         | 
+                                        <a href="#">Remove</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <i class="fa fa-rupee"></i> 200
+                                    </div>
+                                    <p>
+                                        ( 50% off on purchase of 3 )
+                                    </p>
+                                </td>
+                                <td>
+                                    <input value="1" type="number" min="0"/></td>
+                                <td>
+                                    <div>
+                                        <i class="fa fa-rupee"></i> 200
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cart-item">
+                                    <figure>
+                                        <img src="../images/42w_0.png" width="80" height="auto" />
+                                    </figure>
+                                    <figcaption>
+                                        <h1>Name of the item</h1>
+                                        <p>Optionally some details about the item</p>
+                                    </figcaption>
+                                    <div>
+                                        <a href="#">Move to wishlist</a>
+                                         | 
+                                        <a href="#">Remove</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <i class="fa fa-rupee"></i> 200
+                                    </div>
+                                    <p>
+                                        ( 50% off on purchase of 3 )
+                                    </p>
+                                </td>
+                                <td>
+                                    <input value="1" type="number" min="0"/></td>
+                                <td>
+                                    <div>
+                                        <i class="fa fa-rupee"></i> 200
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cart-item">
+                                    <figure>
+                                        <img src="../images/42w_0.png" width="80" height="auto" />
+                                    </figure>
+                                    <figcaption>
+                                        <h1>Name of the item</h1>
+                                        <p>Optionally some details about the item</p>
+                                    </figcaption>
+                                    <div>
+                                        <a href="#">Move to wishlist</a>
+                                         | 
+                                        <a href="#">Remove</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <i class="fa fa-rupee"></i> 200
+                                    </div>
+                                    <p>
+                                        ( 50% off on purchase of 3 )
+                                    </p>
+                                </td>
+                                <td>
+                                    <input value="1" type="number" min="0"/></td>
+                                <td>
+                                    <div>
+                                        <i class="fa fa-rupee"></i> 200
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cart-item">
+                                    <figure>
+                                        <img src="../images/42w_0.png" width="80" height="auto" />
+                                    </figure>
+                                    <figcaption>
+                                        <h1>Name of the item</h1>
+                                        <p>Optionally some details about the item</p>
+                                    </figcaption>
+                                    <div>
+                                        <a href="#">Move to wishlist</a>
+                                         | 
+                                        <a href="#">Remove</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <i class="fa fa-rupee"></i> 200
+                                    </div>
+                                    <p>
+                                        ( 50% off on purchase of 3 )
+                                    </p>
+                                </td>
+                                <td>
+                                    <input value="1" type="number" min="0"/></td>
+                                <td>
+                                    <div>
+                                        <i class="fa fa-rupee"></i> 200
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cart-item">
+                                    <figure>
+                                        <img src="../images/42w_0.png" width="80" height="auto" />
+                                    </figure>
+                                    <figcaption>
+                                        <h1>Name of the item</h1>
+                                        <p>Optionally some details about the item</p>
+                                    </figcaption>
+                                    <div>
+                                        <a href="#">Move to wishlist</a>
+                                         | 
+                                        <a href="#">Remove</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <i class="fa fa-rupee"></i> 200
+                                    </div>
+                                    <p>
+                                        ( 50% off on purchase of 3 )
+                                    </p>
+                                </td>
+                                <td>
+                                    <input value="1" type="number" min="0"/></td>
+                                <td>
+                                    <div>
+                                        <i class="fa fa-rupee"></i> 200
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--
+                <ul>
+                    <li>test</li>
+                    <li>test</li>
+                    <li>test</li>
+                    <li>test</li>
+                    <li>test</li>
+                    <li>test</li>
+                </ul> -->
+                <div id="cart-total" class="clearfix">
+                    <div>
+                        <p class="clearfix">
+                            <span>Sub Total: </span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-rupee"></i> 200</span>
+                        </p>
+                        <p class="clearfix">
+                            <span>Discount:</span><span> <i class="fa fa-rupee"></i> 200</span>
+                        </p>
+                        <p class="clearfix">
+                            <span>Shipping Charges:</span><span> <i class="fa fa-rupee"></i> 200</span>
+                        </p>
+                        <p class="clearfix">
+                             <span>+12.5% VAT:</span><span> <i class="fa fa-rupee"></i> 200</span>
+                        </p>
+                        <p class="clearfix">
+                            <span>Total:</span><span> <i class="fa fa-rupee"></i> 200</span>
+                        </p>
+                    </div>
+                    <!--
+                    <div>
+                        You Pay:<b class="fa fa-rupee"> 10000</b>    
+                    </div>
+                    
+                    <div>
+                        <span>Tax: <i class="fa fa-rupee"></i> 43</span><br>
+                        <span>Discount: <i class="fa fa-rupee"></i> 500</span><br>
+                    </div>
+                    <div></div>-->
+                    
+                    <div>
+                        <!--<p>
+                            <span>Total:</span><span> <i class="fa fa-rupee"></i> 200</span>
+                        </p>-->
+                        <button>Proceed To payment <i class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div> 
+            </div>
+        </article>
+        
+        <section id="container">
+            <main id="content">
+                <section id="display-page" class="clearfix">
+                    <header id="display-cover-block">
+                        <div>
+                            <div id="display-cover-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                            </div>
+                            <div id="display-cover-wish">
+                                <input type="checkbox" name="wishlist-btn" id="wishlist-btn"/>
+                                <label for="wishlist-btn"><i class="fa fa-heart"></i></label>
+                            </div>
+
+                            <div id="display-cover-caption" class="absolute-center">
+                                <h1>Restaurant Name</h1>
+                                <p>venoue sdoo appc jdo foes here</p>
+                            </div>
+
+                            <div class="stars clearfix">
+                              <form action="">
+                                <input class="star star-5" id="star-5" type="radio" name="star"/>
+                                <label class="star star-5" for="star-5"><i class="fa fa-star"></i></label>
+
+                                <input class="star star-4" id="star-4" type="radio" name="star"/>
+                                <label class="star star-4" for="star-4"><i class="fa fa-star"></i></label>
+
+                                <input class="star star-3" id="star-3" type="radio" name="star" checked=""/>
+                                <label class="star star-3" for="star-3"><i class="fa fa-star"></i></label>
+
+                                <input class="star star-2" id="star-2" type="radio" name="star"/>
+                                <label class="star star-2" for="star-2"><i class="fa fa-star"></i></label>
+
+                                <input class="star star-1" id="star-1" type="radio" name="star"/>
+                                <label class="star star-1" for="star-1"><i class="fa fa-star"></i></label>
+
+                              </form>
+                            </div>
+
+                            <div id="display-cover-controls" class="hide-on-small">
+                                <button id="add-to-cart" onclick="toggleMenu('shopping-cart')"><i class="fa fa-opencart"></i> Cart</button>
+                                <button id="add-review"><i class="fa fa-edit"></i> Add Review</button>
+                            </div>
+                        </div>
+                    </header>
+                    
+                    <div id="display-controls-block" class="show-on-small">
+                        <button id="add-to-cart" onclick="toggleMenu('shopping-cart')"><i class="fa fa-opencart"></i>  Cart</button>
+                        <button id="add-review"><i class="fa fa-edit"></i> Add Review</button>
+                    </div>                    
+                    <br>
+                    <div id="item-group-list" class="show-on-small">
+                        <button onclick="collapseVertList('igl-list')"><i class="fa fa-bars"></i> Dishes Menu</button>
+                        <ul id="igl-list" class="default-hidden">
+                            <li><a href="javascript:void(0)" class="order-item-links" onclick="openDishGroup(event, 'grp-1')">Group 1</a></li>
+                            <li><a href="javascript:void(0)" class="order-item-links" onclick="openDishGroup(event, 'grp-2')">Group 2</a></li>
+                            <li><a href="javascript:void(0)" class="order-item-links" onclick="openDishGroup(event, 'grp-3')">Group 3</a></li>
+                            <li><a href="javascript:void(0)" class="order-item-links" onclick="openDishGroup(event, 'grp-4')">Group 4</a></li>
+                            <li><a href="javascript:void(0)" class="order-item-links" onclick="openDishGroup(event, 'grp-5')">Group 5</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div id="item-group-block" class="hide-on-small">
+                        <button class="order-item-btns active" onclick="openDishGroup(event, 'grp-1')">Group 1</button>
+                        <button class="order-item-btns" onclick="openDishGroup(event, 'grp-2')">Group 2</button>
+                        <button class="order-item-btns" onclick="openDishGroup(event, 'grp-3')">Group 3</button>
+                        <button class="order-item-btns" onclick="openDishGroup(event, 'grp-4')">Group 4</button>
+                        <button class="order-item-btns" onclick="openDishGroup(event, 'grp-5')">Group 5</button>
+                    </div>
+                    
+                    <div>
+                        <div id="run-cart">
+                            cart
+                        </div>
+                        <div>
+                            <section id="menu-search">
+                                <label>
+                                    <input type="search" placeholder="search.."/>
+                                    <i class="fa fa-search"></i>
+                                </label>
+                            </section>
+
+                            <section>
+                                <ul class="order-item-list" id="grp-1">
+                                    <li>
+                                        <div class="clearfix">
+
+                                            <div>
+                                                <button><i class="fa fa-plus"></i></button>
+                                                <br>
+                                                <button onclick="showInfoDown('item11-down')">
+                                                    <b><i class="fa fa-arrow-down"></i></b>
+                                                    <b class="default-hidden"><i class="fa fa-arrow-up"></i></b>
+                                                </button>    
+                                            </div>
+                                            <div>
+                                                <h1>Item group 1 name</h1>
+                                                <hr>
+                                                <p>Item descr sds  sd s d s ds d s d sd s d d s d</p>
+                                            </div>
+                                        </div>
+
+                                        <div id="item11-down" class="default-hidden clearfix item-down">
+                                            <img src="../images/42w_0.png" width="100" height="100">
+
+                                            <label>
+                                                Quantity: &nbsp;&nbsp;<input type="number" value="1"/>
+                                            </label>
+                                            <br>
+                                            <button><i class="fa fa-shopping-cart"></i> <i class="hide-on-xsmall">Add to cart</i></button>
+                                            <button><i class="fa fa-heart"></i> <i class="hide-on-xsmall">Add to wishlist</i></button>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="clearfix">
+
+                                            <div>
+                                                <button><i class="fa fa-plus"></i></button>
+                                                <br>
+                                                <button onclick="showInfoDown('item12-down')">
+                                                    <b><i class="fa fa-arrow-down"></i></b>
+                                                    <b class=" default-hidden"><i class="fa fa-arrow-up"></i></b>
+                                                </button>    
+                                            </div>
+                                            <div>
+                                                <h1>Item name</h1>
+                                                <hr>
+                                                <p>Item descr sds  sd s d s ds d s d sd s d d s d</p>
+                                            </div>
+                                        </div>
+
+                                        <div id="item12-down" class="default-hidden clearfix item-down">
+                                            <img src="../images/42w_0.png" width="100" height="100">
+
+                                            <label>
+                                                Quantity: &nbsp;&nbsp;<input type="number" value="1"/>
+                                            </label>
+                                            <br>
+                                            <button><i class="fa fa-shopping-cart"></i> <i class="hide-on-xsmall">Add to cart</i></button>
+                                            <button><i class="fa fa-heart"></i> <i class="hide-on-xsmall">Add to wishlist</i></button>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="clearfix">
+
+                                            <div>
+                                                <button><i class="fa fa-plus"></i></button>
+                                                <br>
+                                                <button type="button" onclick="showInfoDown('item13-down')">
+                                                    <b class=""><i class="fa fa-arrow-down"></i></b>
+                                                    <b class=" default-hidden"><i class="fa fa-arrow-up"></i></b>
+                                                </button>    
+                                            </div>
+                                            <div>
+                                                <h1>Item name</h1>
+                                                <hr>
+                                                <p>Item descr sds  sd s d s ds d s d sd s d d s d</p>
+                                            </div>
+                                        </div>
+
+                                        <div id="item13-down" class="default-hidden clearfix item-down">
+                                            <img src="../images/42w_0.png" width="100" height="100">
+
+                                            <label>
+                                                Quantity: &nbsp;&nbsp;<input type="number" value="1"/>
+                                            </label>
+                                            <br>
+                                            <button><i class="fa fa-shopping-cart"></i> <i class="hide-on-xsmall">Add to cart</i></button>
+                                            <button><i class="fa fa-heart"></i> <i class="hide-on-xsmall">Add to wishlist</i></button>
+                                        </div>
+
+                                    </li>
+                                </ul>
+
+
+                                <ul class="order-item-list" id="grp-2">
+                                    <li>
+                                        <div class="clearfix">
+
+                                            <div>
+                                                <button><i class="fa fa-plus"></i></button>
+                                                <br>
+                                                <button onclick="showInfoDown('item21-down')">
+                                                    <b><i class="fa fa-arrow-down"></i></b>
+                                                    <b class="default-hidden"><i class="fa fa-arrow-up"></i></b>
+                                                </button>    
+                                            </div>
+                                            <div>
+                                                <h1>Item group 2 name</h1>
+                                                <hr>
+                                                <p>Item descr sds  sd s d s ds d s d sd s d d s d</p>
+                                            </div>
+                                        </div>
+
+                                        <div id="item21-down" class="default-hidden clearfix item-down">
+                                            <img src="../images/42w_0.png" width="100" height="100">
+
+                                            <label>
+                                                Quantity: &nbsp;&nbsp;<input type="number" value="1"/>
+                                            </label>
+                                            <br>
+                                            <button><i class="fa fa-shopping-cart"></i> <i class="hide-on-xsmall">Add to cart</i></button>
+                                            <button><i class="fa fa-heart"></i> <i class="hide-on-xsmall">Add to wishlist</i></button>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="clearfix">
+
+                                            <div>
+                                                <button><i class="fa fa-plus"></i></button>
+                                                <br>
+                                                <button onclick="showInfoDown('item22-down')">
+                                                    <b><i class="fa fa-arrow-down"></i></b>
+                                                    <b class=" default-hidden"><i class="fa fa-arrow-up"></i></b>
+                                                </button>    
+                                            </div>
+                                            <div>
+                                                <h1>Item name</h1>
+                                                <hr>
+                                                <p>Item descr sds  sd s d s ds d s d sd s d d s d</p>
+                                            </div>
+                                        </div>
+
+                                        <div id="item22-down" class="default-hidden clearfix item-down">
+                                            <img src="../images/42w_0.png" width="100" height="100">
+
+                                            <label>
+                                                Quantity: &nbsp;&nbsp;<input type="number" value="1"/>
+                                            </label>
+                                            <br>
+                                            <button><i class="fa fa-shopping-cart"></i> <i class="hide-on-xsmall">Add to cart</i></button>
+                                            <button><i class="fa fa-heart"></i> <i class="hide-on-xsmall">Add to wishlist</i></button>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="clearfix">
+
+                                            <div>
+                                                <button><i class="fa fa-plus"></i></button>
+                                                <br>
+                                                <button type="button" onclick="showInfoDown('item23-down')">
+                                                    <b class=""><i class="fa fa-arrow-down"></i></b>
+                                                    <b class=" default-hidden"><i class="fa fa-arrow-up"></i></b>
+                                                </button>    
+                                            </div>
+                                            <div>
+                                                <h1>Item name</h1>
+                                                <hr>
+                                                <p>Item descr sds  sd s d s ds d s d sd s d d s d</p>
+                                            </div>
+                                        </div>
+
+                                        <div id="item23-down" class="default-hidden clearfix item-down">
+                                            <img src="../images/42w_0.png" width="100" height="100">
+
+                                            <label>
+                                                Quantity: &nbsp;&nbsp;<input type="number" value="1"/>
+                                            </label>
+                                            <br>
+                                            <button><i class="fa fa-shopping-cart"></i> <i class="hide-on-xsmall">Add to cart</i></button>
+                                            <button><i class="fa fa-heart"></i> <i class="hide-on-xsmall">Add to wishlist</i></button>
+                                        </div>
+
+                                    </li>
+                                </ul>
+
+
+                                <ul class="order-item-list" id="grp-3">
+                                    <li>
+                                        <div class="clearfix">
+
+                                            <div>
+                                                <button><i class="fa fa-plus"></i></button>
+                                                <br>
+                                                <button onclick="showInfoDown('item31-down')">
+                                                    <b><i class="fa fa-arrow-down"></i></b>
+                                                    <b class="default-hidden"><i class="fa fa-arrow-up"></i></b>
+                                                </button>    
+                                            </div>
+                                            <div>
+                                                <h1>Item group 3 name</h1>
+                                                <hr>
+                                                <p>Item descr sds  sd s d s ds d s d sd s d d s d</p>
+                                            </div>
+                                        </div>
+
+                                        <div id="item31-down" class="default-hidden clearfix item-down">
+                                            <img src="../images/42w_0.png" width="100" height="100">
+
+                                            <label>
+                                                Quantity: &nbsp;&nbsp;<input type="number" value="1"/>
+                                            </label>
+                                            <br>
+                                            <button><i class="fa fa-shopping-cart"></i> <i class="hide-on-xsmall">Add to cart</i></button>
+                                            <button><i class="fa fa-heart"></i> <i class="hide-on-xsmall">Add to wishlist</i></button>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="clearfix">
+
+                                            <div>
+                                                <button><i class="fa fa-plus"></i></button>
+                                                <br>
+                                                <button onclick="showInfoDown('item32-down')">
+                                                    <b><i class="fa fa-arrow-down"></i></b>
+                                                    <b class=" default-hidden"><i class="fa fa-arrow-up"></i></b>
+                                                </button>    
+                                            </div>
+                                            <div>
+                                                <h1>Item name</h1>
+                                                <hr>
+                                                <p>Item descr sds  sd s d s ds d s d sd s d d s d</p>
+                                            </div>
+                                        </div>
+
+                                        <div id="item32-down" class="default-hidden clearfix item-down">
+                                            <img src="../images/42w_0.png" width="100" height="100">
+
+                                            <label>
+                                                Quantity: &nbsp;&nbsp;<input type="number" value="1"/>
+                                            </label>
+                                            <br>
+                                            <button><i class="fa fa-shopping-cart"></i> <i class="hide-on-xsmall">Add to cart</i></button>
+                                            <button><i class="fa fa-heart"></i> <i class="hide-on-xsmall">Add to wishlist</i></button>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="clearfix">
+
+                                            <div>
+                                                <button><i class="fa fa-plus"></i></button>
+                                                <br>
+                                                <button type="button" onclick="showInfoDown('item33-down')">
+                                                    <b class=""><i class="fa fa-arrow-down"></i></b>
+                                                    <b class=" default-hidden"><i class="fa fa-arrow-up"></i></b>
+                                                </button>    
+                                            </div>
+                                            <div>
+                                                <h1>Item name</h1>
+                                                <hr>
+                                                <p>Item descr sds  sd s d s ds d s d sd s d d s d</p>
+                                            </div>
+                                        </div>
+
+                                        <div id="item33-down" class="default-hidden clearfix item-down">
+                                            <img src="../images/42w_0.png" width="100" height="100">
+
+                                            <label>
+                                                Quantity: &nbsp;&nbsp;<input type="number" value="1"/>
+                                            </label>
+                                            <br>
+                                            <button><i class="fa fa-shopping-cart"></i> <i class="hide-on-xsmall">Add to cart</i></button>
+                                            <button><i class="fa fa-heart"></i> <i class="hide-on-xsmall">Add to wishlist</i></button>
+                                        </div>
+
+                                    </li>
+                                </ul>
+
+
+                                <ul class="order-item-list" id="grp-4">
+                                    <li>
+                                        <div class="clearfix">
+
+                                            <div>
+                                                <button><i class="fa fa-plus"></i></button>
+                                                <br>
+                                                <button onclick="showInfoDown('item41-down')">
+                                                    <b><i class="fa fa-arrow-down"></i></b>
+                                                    <b class="default-hidden"><i class="fa fa-arrow-up"></i></b>
+                                                </button>    
+                                            </div>
+                                            <div>
+                                                <h1>Item group 4 name</h1>
+                                                <hr>
+                                                <p>Item descr sds  sd s d s ds d s d sd s d d s d</p>
+                                            </div>
+                                        </div>
+
+                                        <div id="item41-down" class="default-hidden clearfix item-down">
+                                            <img src="../images/42w_0.png" width="100" height="100">
+
+                                            <label>
+                                                Quantity: &nbsp;&nbsp;<input type="number" value="1"/>
+                                            </label>
+                                            <br>
+                                            <button><i class="fa fa-shopping-cart"></i> <i class="hide-on-xsmall">Add to cart</i></button>
+                                            <button><i class="fa fa-heart"></i> <i class="hide-on-xsmall">Add to wishlist</i></button>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="clearfix">
+
+                                            <div>
+                                                <button><i class="fa fa-plus"></i></button>
+                                                <br>
+                                                <button onclick="showInfoDown('item42-down')">
+                                                    <b><i class="fa fa-arrow-down"></i></b>
+                                                    <b class=" default-hidden"><i class="fa fa-arrow-up"></i></b>
+                                                </button>    
+                                            </div>
+                                            <div>
+                                                <h1>Item name</h1>
+                                                <hr>
+                                                <p>Item descr sds  sd s d s ds d s d sd s d d s d</p>
+                                            </div>
+                                        </div>
+
+                                        <div id="item42-down" class="default-hidden clearfix item-down">
+                                            <img src="../images/42w_0.png" width="100" height="100">
+
+                                            <label>
+                                                Quantity: &nbsp;&nbsp;<input type="number" value="1"/>
+                                            </label>
+                                            <br>
+                                            <button><i class="fa fa-shopping-cart"></i> <i class="hide-on-xsmall">Add to cart</i></button>
+                                            <button><i class="fa fa-heart"></i> <i class="hide-on-xsmall">Add to wishlist</i></button>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="clearfix">
+
+                                            <div>
+                                                <button><i class="fa fa-plus"></i></button>
+                                                <br>
+                                                <button type="button" onclick="showInfoDown('item43-down')">
+                                                    <b class=""><i class="fa fa-arrow-down"></i></b>
+                                                    <b class=" default-hidden"><i class="fa fa-arrow-up"></i></b>
+                                                </button>    
+                                            </div>
+                                            <div>
+                                                <h1>Item name</h1>
+                                                <hr>
+                                                <p>Item descr sds  sd s d s ds d s d sd s d d s d</p>
+                                            </div>
+                                        </div>
+
+                                        <div id="item43-down" class="default-hidden clearfix item-down">
+                                            <img src="../images/42w_0.png" width="100" height="100">
+
+                                            <label>
+                                                Quantity: &nbsp;&nbsp;<input type="number" value="1"/>
+                                            </label>
+                                            <br>
+                                            <button><i class="fa fa-shopping-cart"></i> <i class="hide-on-xsmall">Add to cart</i></button>
+                                            <button><i class="fa fa-heart"></i> <i class="hide-on-xsmall">Add to wishlist</i></button>
+                                        </div>
+
+                                    </li>
+                                </ul>
+
+
+                                <ul class="order-item-list" id="grp-5">
+                                    <li>
+                                        <div class="clearfix">
+
+                                            <div>
+                                                <button><i class="fa fa-plus"></i></button>
+                                                <br>
+                                                <button onclick="showInfoDown('item51-down')">
+                                                    <b><i class="fa fa-arrow-down"></i></b>
+                                                    <b class="default-hidden"><i class="fa fa-arrow-up"></i></b>
+                                                </button>    
+                                            </div>
+                                            <div>
+                                                <h1>Item group 5 name</h1>
+                                                <hr>
+                                                <p>Item descr sds  sd s d s ds d s d sd s d d s d</p>
+                                            </div>
+                                        </div>
+
+                                        <div id="item51-down" class="default-hidden clearfix item-down">
+                                            <img src="../images/42w_0.png" width="100" height="100">
+
+                                            <label>
+                                                Quantity: &nbsp;&nbsp;<input type="number" value="1"/>
+                                            </label>
+                                            <br>
+                                            <button><i class="fa fa-shopping-cart"></i> <i class="hide-on-xsmall">Add to cart</i></button>
+                                            <button><i class="fa fa-heart"></i> <i class="hide-on-xsmall">Add to wishlist</i></button>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="clearfix">
+
+                                            <div>
+                                                <button><i class="fa fa-plus"></i></button>
+                                                <br>
+                                                <button onclick="showInfoDown('item52-down')">
+                                                    <b><i class="fa fa-arrow-down"></i></b>
+                                                    <b class=" default-hidden"><i class="fa fa-arrow-up"></i></b>
+                                                </button>    
+                                            </div>
+                                            <div>
+                                                <h1>Item name</h1>
+                                                <hr>
+                                                <p>Item descr sds  sd s d s ds d s d sd s d d s d</p>
+                                            </div>
+                                        </div>
+
+                                        <div id="item52-down" class="default-hidden clearfix item-down">
+                                            <img src="../images/42w_0.png" width="100" height="100">
+
+                                            <label>
+                                                Quantity: &nbsp;&nbsp;<input type="number" value="1"/>
+                                            </label>
+                                            <br>
+                                            <button><i class="fa fa-shopping-cart"></i> <i class="hide-on-xsmall">Add to cart</i></button>
+                                            <button><i class="fa fa-heart"></i> <i class="hide-on-xsmall">Add to wishlist</i></button>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="clearfix">
+
+                                            <div>
+                                                <button><i class="fa fa-plus"></i></button>
+                                                <br>
+                                                <button type="button" onclick="showInfoDown('item53-down')">
+                                                    <b class=""><i class="fa fa-arrow-down"></i></b>
+                                                    <b class=" default-hidden"><i class="fa fa-arrow-up"></i></b>
+                                                </button>    
+                                            </div>
+                                            <div>
+                                                <h1>Item name</h1>
+                                                <hr>
+                                                <p>Item descr sds  sd s d s ds d s d sd s d d s d</p>
+                                            </div>
+                                        </div>
+
+                                        <div id="item53-down" class="default-hidden clearfix item-down">
+                                            <img src="../images/42w_0.png" width="100" height="100">
+
+                                            <label>
+                                                Quantity: &nbsp;&nbsp;<input type="number" value="1"/>
+                                            </label>
+                                            <br>
+                                            <button><i class="fa fa-shopping-cart"></i> <i class="hide-on-xsmall">Add to cart</i></button>
+                                            <button><i class="fa fa-heart"></i> <i class="hide-on-xsmall">Add to wishlist</i></button>
+                                        </div>
+
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>    
+                    </div>
+                </section>
+            </main>
+            <aside id="misc-sidebar" class="hide-on-med">
+                <div>
+                    <h1>Popular Posts</h1>
+                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1 description is present here </p>
+                </div>
+                <div>
+                    <h1>Popular Posts</h1>
+                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1 description is present here </p>
+                </div>
+                <div>
+                    <h1>Popular Posts</h1>
+                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1 description is present here </p>
+                </div>
+                <div>
+                    <h1>Popular Posts</h1>
+                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1 description is present here </p>
+                </div>
+                <div>
+                    <h1>Popular Posts</h1>
+                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1 description is present here </p>
+                </div>
+                <div>
+                    <h1>Popular Posts</h1>
+                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1 description is present here </p>
+                </div>
+            </aside>
+        </section>        
+    </div>
+    
+    <script>
+        function showInfoDown(str) {
+            var e, i, f, j, elem;
+            
+            elem = document.querySelector("#"+str).parentElement.firstElementChild.firstElementChild.children;
+            e = elem[2].children;
+            
+            for (i = 0; i < e.length; i++) {
+                e[i].classList.toggle('default-hidden');
+            }
+            
+            f = document.getElementsByClassName('item-down');
+            
+            if(document.getElementById(str).classList.contains('default-hidden')) {
+                for(j=0; j < f.length; j++) {
+                    console.log(j+" - "+"\n");
+                    if(!f[j].classList.contains('default-hidden'))
+                        f[j].classList.add('default-hidden');
+                }
+            }
+            
+            document.getElementById(str).classList.toggle('default-hidden');
+            
+            
+        }
+        
+        function openDishGroup(evt, tabName) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("order-item-list");
+            
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("order-item-links");
+            for (i = 0; i < tabcontent.length; i++) {
+                tablinks[i].classList.remove("active");
+                console.log('\n'+tablinks[i].tagName)
+            }
+            
+            tablinks = document.getElementsByClassName("order-item-btns");
+            for (i = 0; i < tabcontent.length; i++) {
+                tablinks[i].classList.remove("active");
+                console.log('\n'+tablinks[i].tagName)
+            }
+            
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.classList.add("active");
+            
+            collapseVertList('igl-list');
+        }
+        
+        function collapseList(str) {
+            var c = document.getElementsByClassName('order-sublist');
+            /*
+            var i;
+            for(i = 0; i < c.length; i++) {
+                c[i].style.display = 'none';
+            }*/
+            if(document.getElementById(str).style.display == 'block')
+                document.getElementById(str).style.display = 'none';
+            else
+                document.getElementById(str).style.display = 'block';
+        }
+        var isHiddenSidebar = true;
+        
+        
+        function collapseVertList(str) {
+            document.getElementById(str).classList.toggle('default-hidden');
+        }
+        
+        
+        /*
+        // put optionally on the pages where you want the sidebar open by default
+        
+        isHiddenSidebar = function setBool() {
+            if (innerWidth >= 1280)
+                isHiddenSidebar = false;
+            return isHiddenSidebar;
+        }();*/
+    </script>
+    
+    <script src="../scripts/default.js">
+        
+    </script><!--
+    <audio src="../2.mp3" autoplay />-->
+</body>
+</html>
