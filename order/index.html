@@ -98,16 +98,13 @@
             <div id="fc-container" class="modal-box">
                 <ul>
                     <li>
-                        <a href="javascript:void(0);"><i class="fa fa-heart"></i>&nbsp;&nbsp;&nbsp;Wish List</a>
+                        <a href="javascript:void(0);" onclick="toggleMenu('shopping-cart')"><i class="fa fa-heart"></i>&nbsp;&nbsp;&nbsp;Wish List</a>
                     </li>
                     <li>
-                        <a href="javascript:void(0);"><i class="fa fa-opencart"></i>&nbsp;&nbsp;&nbsp;Cart</a>
+                        <a href="javascript:void(0);" onclick="toggleMenu('shopping-cart')"><i class="fa fa-opencart"></i>&nbsp;&nbsp;&nbsp;Cart</a>
                     </li>
                     <li>
-                        <a href="javascript:void(0);"><i class="fa fa-pencil"></i>&nbsp;&nbsp;&nbsp;Feedback</a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);"><i class="fa fa-opencart"></i>&nbsp;&nbsp;&nbsp;Cart</a>
+                        <a href="javascript:void(0);" onclick="toggleMenu('shopping-cart')"><i class="fa fa-pencil"></i>&nbsp;&nbsp;&nbsp;Feedback</a>
                     </li>
                 </ul>    
             </div>
@@ -378,14 +375,14 @@
 
                             <div id="display-cover-controls" class="hide-on-small">
                                 <button id="add-to-cart" onclick="toggleMenu('shopping-cart')"><i class="fa fa-opencart"></i> Cart</button>
-                                <button id="add-review"><i class="fa fa-edit"></i> Add Review</button>
+                                <button id="add-review" onclick="toggleMenu('shopping-cart')"><i class="fa fa-edit"></i> Add Review</button>
                             </div>
                         </div>
                     </header>
                     
                     <div id="display-controls-block" class="show-on-small">
                         <button id="add-to-cart" onclick="toggleMenu('shopping-cart')"><i class="fa fa-opencart"></i>  Cart</button>
-                        <button id="add-review"><i class="fa fa-edit"></i> Add Review</button>
+                        <button id="add-review" onclick="toggleMenu('shopping-cart')"><i class="fa fa-edit"></i>  Review</button>
                     </div>                    
                     <br>
                     <div id="item-group-list" class="show-on-small">
@@ -409,7 +406,7 @@
                     
                     <div>
                         <div id="run-cart">
-                            cart
+                            
                         </div>
                         <div>
                             <section id="menu-search">
