@@ -1,26 +1,29 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="../css/reset.css" type="text/css">
-<link rel="stylesheet" type="text/css" href="../css/default1.css">
-<link rel="stylesheet" href="../fonts/font-awesome-4.5.0/css/font-awesome.min.css">
-    
-<title>View</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/css/default1.css" type="text/css">
+    <link rel="stylesheet" href="/fonts/font-awesome-4.5.0/css/font-awesome.min.css">
+    <title>View</title>
 </head>
 
 <body>
-	<div id="wrapper">
+    <div id="wrapper">
         <aside id="sidebar"></aside>
 
         <header id="sticky-bar" class="clearfix">
             <a href="javascript:void(0);" onclick="hideSidebar()" id="toggle-btn" class="sticky-block">&equiv;</a>
-            
-            <a href="javascript:void(0);" id="logo" class="sticky-block"><span style="font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#FB9E07">eh</span> <span class="hide-on-xsmall">Explore H!sar</span></a>
+
+            <a href="javascript:void(0);" id="logo" class="sticky-block"><span
+                    style="font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#FB9E07">eh</span>
+                <span class="hide-on-xsmall">Explore H!sar</span></a>
 
             <div id="site-domain" class="dropdown-menu sticky-block domain-dropbtn">
-                <button><span class="hide-on-small">choose domain&nbsp;&nbsp;</span><span id="dropdown-bracket"><i class="fa fa-chevron-down"></i></span></button>
+                <button><span class="hide-on-small">choose domain&nbsp;&nbsp;</span><span id="dropdown-bracket"><i
+                            class="fa fa-chevron-down"></i></span></button>
                 <ul class="default-hidden dropdown-content">
                     <li><a href="#">Restaurant</a></li>
                     <li><a href="#">Venue</a></li>
@@ -28,13 +31,17 @@
                 </ul>
             </div>
 
-            <a href="javascript:void(0);" class="sticky-block sticky-btn" id="search-btn" onclick="toggleMenu('sticky-search')"><i class="fa fa-search"></i></a>
-            
-            <a href="javascript:void(0);" class="sticky-block sticky-btn hide-on-xsmall" id="sign-in-btn" onclick="toggleMenu('sign-in')"><i class="fa fa-user"></i><i class="hide-on-small">&nbsp;&nbsp;sign in</i></a>
-            
-            <article id="sticky-search"  class="default-hidden dropdown-content">
-                <a href="javascript:void(0);" id="close-search" class="cross cross-light hide-on-small" onclick="toggleMenu('sticky-search')"><i class="fa fa-close"></i></a>
-                
+            <a href="javascript:void(0);" class="sticky-block sticky-btn" id="search-btn"
+                onclick="toggleMenu('sticky-search')"><i class="fa fa-search"></i></a>
+
+            <a href="javascript:void(0);" class="sticky-block sticky-btn hide-on-xsmall" id="sign-in-btn"
+                onclick="toggleMenu('sign-in')"><i class="fa fa-user"></i><i class="hide-on-small">&nbsp;&nbsp;sign
+                    in</i></a>
+
+            <article id="sticky-search" class="default-hidden dropdown-content">
+                <a href="javascript:void(0);" id="close-search" class="cross cross-light hide-on-small"
+                    onclick="toggleMenu('sticky-search')"><i class="fa fa-close"></i></a>
+
                 <section id="search-bar-container">
                     <form id="search-bar" action="self" method="get">
                         <input type="search" name="search" id="main-search" placeholder="search...">
@@ -43,7 +50,8 @@
                             <option value="restaurant">restaurant</option>
                             <option value="venue">venue</option>
                             <option value="hotel">hotel</option>
-                        </select><!--
+                        </select>
+                        <!--
                         <input type="submit" value="search" id="search-icon">-->
                         <button type="submit" id="search-icon"><i class="fa fa-search"></i></button>
                     </form>
@@ -53,48 +61,51 @@
 
         <article id="sign-in" class="modal-box">
             <form>
-                <a href="javascript:void(0);" class="cross cross-dark" onclick="toggleMenu('sign-in')"><i class="fa fa-close"></i></a>
+                <a href="javascript:void(0);" class="cross cross-dark" onclick="toggleMenu('sign-in')"><i
+                        class="fa fa-close"></i></a>
                 <!--
                 <div id="sign-in-user">
                     <i class="fa fa-user"></i>
                 </div>-->
-                <div id="sign-in-using"><!--
+                <div id="sign-in-using">
+                    <!--
                     <p>sign in using </p>--><br>
                     <a href="#"><i class="fa fa-facebook"></i></a>
                     <a href="#"><i class="fa fa-google-plus"></i></a>
                     <a href="#"><i class="fa fa-twitter"></i></a>
                 </div>
-                
+
                 <div class="or-separator dark-separator">
                     <hr>
                     <span>or</span>
                 </div>
-                
-                
+
+
                 <fieldset>
-                    <input type="text" placeholder="enter username" name="username"  class="text-field"/>
+                    <input type="text" placeholder="enter username" name="username" class="text-field" />
                     <br><br>
-                    <input type="password" placeholder="enter password" name="password" class="text-field"/>
+                    <input type="password" placeholder="enter password" name="password" class="text-field" />
                     <br>
-                    <input type="submit" name="sign in" id="log-in-btn" value="log in" class="sign-in-ctrls" />  
+                    <input type="submit" name="sign in" id="log-in-btn" value="log in" class="sign-in-ctrls" />
                     <br>
                     <a id="sign-in-forgot" href="javascript:void(0);">Forgot password?</a>
                 </fieldset>
-                
+
                 <div class="or-separator dark-separator">
                     <hr>
                     <span>or</span>
                 </div>
-                
+
                 <div id="sign-in-up">
                     <label>create new account</label>
                     <input type="button" name="sign-up" value="sign up" id="sign-up-btn" class="sign-in-ctrls" />
                 </div>
             </form>
         </article>
-        
+
         <article id="fixed-control">
-            <a id="fixed-control-btn" href="javascript:void(0);" onclick="toggleMenu('fc-container')"><i class="fa fa-plus"></i></a>
+            <a id="fixed-control-btn" href="javascript:void(0);" onclick="toggleMenu('fc-container')"><i
+                    class="fa fa-plus"></i></a>
             <div id="fc-container" class="modal-box">
                 <ul>
                     <li>
@@ -109,13 +120,13 @@
                     <li>
                         <a href="javascript:void(0);"><i class="fa fa-opencart"></i>&nbsp;&nbsp;&nbsp;Cart</a>
                     </li>
-                </ul>    
+                </ul>
             </div>
         </article>
-        
+
         <section id="container">
             <main id="content">
-            	<section id="display-page" class="clearfix">
+                <section id="display-page" class="clearfix">
                     <header id="display-cover-block">
                         <div>
                             <div id="display-cover-social">
@@ -124,8 +135,9 @@
                                 <a href="#"><i class="fa fa-twitter"></i></a>
                             </div>
                             <div id="display-cover-wish">
-                                <input type="checkbox" name="wishlist-btn" id="wishlist-btn"/>
-                                <label for="wishlist-btn"><i class="fa fa-heart"></i></label><!--
+                                <input type="checkbox" name="wishlist-btn" id="wishlist-btn" />
+                                <label for="wishlist-btn"><i class="fa fa-heart"></i></label>
+                                <!--
                                 <a href="#"><i class="fa fa-heart"></i></a>-->
                             </div>
 
@@ -133,50 +145,50 @@
                                 <h1>Venue Name</h1>
                                 <p>venoue sdoo appc jdo foes here</p>
                             </div>
-                            
+
                             <div class="stars clearfix">
-                              <form action="">
-                                <input class="star star-5" id="star-5" type="radio" name="star"/>
-                                <label class="star star-5" for="star-5"><i class="fa fa-star"></i></label>
-                                  
-                                <input class="star star-4" id="star-4" type="radio" name="star"/>
-                                <label class="star star-4" for="star-4"><i class="fa fa-star"></i></label>
-                                  
-                                <input class="star star-3" id="star-3" type="radio" name="star" checked=""/>
-                                <label class="star star-3" for="star-3"><i class="fa fa-star"></i></label>
-                                  
-                                <input class="star star-2" id="star-2" type="radio" name="star"/>
-                                <label class="star star-2" for="star-2"><i class="fa fa-star"></i></label>
-                                  
-                                <input class="star star-1" id="star-1" type="radio" name="star"/>
-                                <label class="star star-1" for="star-1"><i class="fa fa-star"></i></label>
-                                  
-                              </form>
+                                <form action="">
+                                    <input class="star star-5" id="star-5" type="radio" name="star" />
+                                    <label class="star star-5" for="star-5"><i class="fa fa-star"></i></label>
+
+                                    <input class="star star-4" id="star-4" type="radio" name="star" />
+                                    <label class="star star-4" for="star-4"><i class="fa fa-star"></i></label>
+
+                                    <input class="star star-3" id="star-3" type="radio" name="star" checked="" />
+                                    <label class="star star-3" for="star-3"><i class="fa fa-star"></i></label>
+
+                                    <input class="star star-2" id="star-2" type="radio" name="star" />
+                                    <label class="star star-2" for="star-2"><i class="fa fa-star"></i></label>
+
+                                    <input class="star star-1" id="star-1" type="radio" name="star" />
+                                    <label class="star star-1" for="star-1"><i class="fa fa-star"></i></label>
+
+                                </form>
                             </div>
-                            
+
                             <div id="display-cover-controls" class="hide-on-small">
                                 <button id="add-to-cart"><i class="fa fa-opencart"></i> Add to cart</button>
                                 <button id="add-to-cart"><i class="fa fa-edit"></i> Add Review</button>
                             </div>
                         </div>
                     </header>
-                    
+
                     <div id="display-controls-block" class="show-on-small">
                         <button id="add-to-cart"><i class="fa fa-opencart"></i> Add to cart</button>
                         <button id="add-to-cart"><i class="fa fa-edit"></i> Add Review</button>
                     </div>
-                    
+
                     <aside id="display-aside-block">
-                        
+
                         <section id="display-address" class="display-block">
-                            <h1><i class="fa fa-envelope"></i> Address</h1> 
+                            <h1><i class="fa fa-envelope"></i> Address</h1>
                             <p>Shop no.- 21, Nagori Gate, Hisar</p>
                             <p style="font-weight: bold"><i class="fa fa-phone"></i>&nbsp;&nbsp;9777777777</p>
                             <p><i class="fa fa-at"></i>&nbsp;&nbsp;business@email.com</p>
-                        </section>  
-                        
+                        </section>
+
                         <section id="display-facility" class="display-block">
-                            <h1><i class="fa fa-tags"></i> Facilities</h1> 
+                            <h1><i class="fa fa-tags"></i> Facilities</h1>
                             <ul>
                                 <li><i class="fa fa-tag"></i> Facility 1</li>
                                 <li><i class="fa fa-tag"></i> Facility 1</li>
@@ -186,195 +198,104 @@
                                 <li><i class="fa fa-tag"></i> Facility 1</li>
                                 <li><i class="fa fa-tag"></i> Facility 1</li>
                             </ul>
-                        </section>  
-                        
+                        </section>
+
                         <section id="display-opening" class="display-block">
-                            <h1><i class="fa fa-clock-o"></i> Opening Hour</h1> 
+                            <h1><i class="fa fa-clock-o"></i> Opening Hour</h1>
                             <p>12:00 am to 6:00 pm</p>
                         </section>
                     </aside>
-                    
+
                     <section id="display-content-block">
                         <ul class="tab">
-                          <li><a href="javascript:void(0);" class="tablinks active" onclick="openTab(event, 'photos')">Photos</a></li>
-                          <li><a href="javascript:void(0);" class="tablinks" onclick="openTab(event, 'menu')">Menu</a></li>
-                          <li><a href="javascript:void(0);" class="tablinks" onclick="openTab(event, 'reviews')">Reviews</a></li>
+                            <li><a href="javascript:void(0);" class="tablinks active"
+                                    onclick="openTab(event, 'photos')">Photos</a></li>
+                            <li><a href="javascript:void(0);" class="tablinks" onclick="openTab(event, 'menu')">Menu</a>
+                            </li>
+                            <li><a href="javascript:void(0);" class="tablinks"
+                                    onclick="openTab(event, 'reviews')">Reviews</a></li>
                         </ul>
 
                         <div id="photos" class="tabcontent">
-                            <img src="../images/42w_0.png" width="100px" height="100px"/>
-                            <img src="../images/bg.png" width="100px" height="100px"/>
-                            <img src="../images/affair-1238442_640.jpg" width="100px" height="100px" />
-                            <img src="../images/42w_0.png" width="100px" height="100px"/>
-                            <img src="../images/bg.png" width="100px" height="100px"/>
-                            <img src="../images/affair-1238442_640.jpg" width="100px" height="100px" />
-                            <img src="../images/42w_0.png" width="100px" height="100px"/>
-                            <img src="../images/bg.png" width="100px" height="100px"/>
-                            <img src="../images/affair-1238442_640.jpg" width="100px" height="100px" />
-                            
+                            <img src="/images/42w_0.png" width="100px" height="100px" />
+                            <img src="/images/bg.png" width="100px" height="100px" />
+                            <img src="/images/affair-1238442_640.jpg" width="100px" height="100px" />
+                            <img src="/images/42w_0.png" width="100px" height="100px" />
+                            <img src="/images/bg.png" width="100px" height="100px" />
+                            <img src="/images/affair-1238442_640.jpg" width="100px" height="100px" />
+                            <img src="/images/42w_0.png" width="100px" height="100px" />
+                            <img src="/images/bg.png" width="100px" height="100px" />
+                            <img src="/images/affair-1238442_640.jpg" width="100px" height="100px" />
+
                             <button><i class="fa fa-plus"></i><br>Load more</button>
                         </div>
 
                         <div id="menu" class="tabcontent">
-                            <img src="../images/42w_0.png" width="100px" height="100px"/>
-                          <img src="../images/42w_0.png" width="100px" height="100px"/>
-                            <img src="../images/affair-1238442_640.jpg" width="100px" height="100px" />
-                            <img src="../images/42w_0.png" width="100px" height="100px"/>
-                          <img src="../images/42w_0.png" width="100px" height="100px"/>
-                            <img src="../images/affair-1238442_640.jpg" width="100px" height="100px" />
-                            <img src="../images/42w_0.png" width="100px" height="100px"/>
-                          <img src="../images/42w_0.png" width="100px" height="100px"/>
-                            <img src="../images/affair-1238442_640.jpg" width="100px" height="100px" />
-                            <img src="../images/bg.png" width="100px" height="100px"/>
-                            <img src="../images/bg.png" width="100px" height="100px"/>
-                            <img src="../images/affair-1238442_640.jpg" width="100px" height="100px" />
-                            <img src="../images/42w_0.png" width="100px" height="100px"/>
-                            <img src="../images/bg.png" width="100px" height="100px"/>
-                            <img src="../images/affair-1238442_640.jpg" width="100px" height="100px" />
-                            
+                            <img src="/images/42w_0.png" width="100px" height="100px" />
+                            <img src="/images/42w_0.png" width="100px" height="100px" />
+                            <img src="/images/affair-1238442_640.jpg" width="100px" height="100px" />
+                            <img src="/images/42w_0.png" width="100px" height="100px" />
+                            <img src="/images/42w_0.png" width="100px" height="100px" />
+                            <img src="/images/affair-1238442_640.jpg" width="100px" height="100px" />
+                            <img src="/images/42w_0.png" width="100px" height="100px" />
+                            <img src="/images/42w_0.png" width="100px" height="100px" />
+                            <img src="/images/affair-1238442_640.jpg" width="100px" height="100px" />
+                            <img src="/images/bg.png" width="100px" height="100px" />
+                            <img src="/images/bg.png" width="100px" height="100px" />
+                            <img src="/images/affair-1238442_640.jpg" width="100px" height="100px" />
+                            <img src="/images/42w_0.png" width="100px" height="100px" />
+                            <img src="/images/bg.png" width="100px" height="100px" />
+                            <img src="/images/affair-1238442_640.jpg" width="100px" height="100px" />
+
                             <button><i class="fa fa-plus"></i><br>Load more</button>
                         </div>
 
                         <div id="reviews" class="tabcontent">
-                          <p>London is the capital city of England. London is the capital city of England. London is the capital city of England. London is the capital city of England. London is the capital city of England. London is the capital city of England. London is the capital city of England. London is the capital city of England. London is the capital city of England. </p>
+                            <p>London is the capital city of England. London is the capital city of England. London is
+                                the capital city of England. London is the capital city of England. London is the
+                                capital city of England. London is the capital city of England. London is the capital
+                                city of England. London is the capital city of England. London is the capital city of
+                                England. </p>
                         </div>
-                        
+
                     </section>
                 </section>
             </main>
             <aside id="misc-sidebar" class="hide-on-med">
                 <div>
                     <h1>Popular Posts</h1>
-                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1 description is present here </p>
+                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1
+                        description is present here </p>
                 </div>
                 <div>
                     <h1>Popular Posts</h1>
-                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1 description is present here </p>
+                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1
+                        description is present here </p>
                 </div>
                 <div>
                     <h1>Popular Posts</h1>
-                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1 description is present here </p>
+                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1
+                        description is present here </p>
                 </div>
                 <div>
                     <h1>Popular Posts</h1>
-                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1 description is present here </p>
+                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1
+                        description is present here </p>
                 </div>
                 <div>
                     <h1>Popular Posts</h1>
-                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1 description is present here </p>
+                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1
+                        description is present here </p>
                 </div>
                 <div>
                     <h1>Popular Posts</h1>
-                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1 description is present here </p>
+                    <p>post 1 description is present here post 1 descriptionsent here post 1 descriptionsent here post 1
+                        description is present here </p>
                 </div>
             </aside>
-        </section>        
+        </section>
     </div>
-    
-    <!--<script>
-        function hideSidebar() {
-            var sidebarE = document.getElementById('sidebar');
-           
-            if(sidebarE.style.left == '-17.5em') {
-                document.getElementById('sidebar').style.left = '0em';
-                document.getElementById('container').style.left = '17.5em';/*
-                document.getElementById('toggle-btn').style.marginLeft = '-0.6em';
-                document.getElementById('fixed-toggle-btn').style.right = '0em';*/
-            }
-            else {
-                document.getElementById("sidebar").style.left = "-17.5em"; document.getElementById("container").style.left = "0em";/*
-                document.getElementById("toggle-btn").style.margin = "0.15em";
-                document.getElementById("fixed-toggle-btn").style.right = "-1.15em";*/
-            }
-        }
-        
-        function signInMenu() {
-            
-            var signIn = document.querySelector("#sign-in");
-            
-            if(signIn.style.display == "block")
-                signIn.style.display = "none";
-            else
-                signIn.style.display = "block";
-        }
-        
-        function searchMenu() {
-            
-            var signIn = document.querySelector("#sticky-search");
-            
-            if(signIn.style.display == "block")
-                signIn.style.display = "none";
-            else
-                signIn.style.display = "block";
-        }
-        
-        function toggleDropdown(str) {
-            document.getElementById(str).children[1].classList.toggle('show');
-            console.log(document.getElementById(str));
-        }
-        
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn-click')) {
-                var dropdowns = document.getElementsByClassName('dropdown-menu');
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.children[1].classList.contains('show')) {
-                        openDropdown.children[1].classList.remove('show');
-                    }
-                }
-            }
-        }
-        
-        function goSecondCol(colToShow) {
-            var c = document.getElementById('sidebar').children;
-            c[0].style.left = '-18.5em';
-            c[1].style.left = '0em';
-        }
-        
-        function goThirdCol(colToShow) {
-            var c = document.getElementById('sidebar').children;
-           \\rashmi ki shaadi hone wali hai ok 
-            \\tu na kuwe me pad jhere me nikal
-            \\huh i hate u
-             \\ganda insaan kkt
-              \\tu na jab hsta h toh mast lgta hai
-purple clr ki shirt bhi achi lgti hai
-            c[0].style.left = '-18.5em';
-            c[2].style.left = '0em';
-        }
-        
-        function goSecondCol(colToShow) {
-            var c = document.getElementById('sidebar').children;
-            c[0].style.left = '-18.5em';
-            c[1].style.left = '0em';
-        }
-        
-        function goFirstCol() {
-            var c = document.getElementById('sidebar').children;
-            c[0].style.left = '0em';
-            c[1].style.left = '18.5em';
-            c[2].style.left = '37em';
-        }
-    </script>-->
-    
-    
-    <script >
-        
-        var isHiddenSidebar = true;
-        /*
-        // put optionally on the pages where you want the sidebar open by default
-        
-        isHiddenSidebar = function setBool() {
-            if (innerWidth >= 1280)
-                isHiddenSidebar = false;
-            return isHiddenSidebar;
-        }();*/
-    </script>
-    
-    <script src="../scripts/default.js">
-        
-    </script>
-    
+    <script src="/scripts/main.js"></script>
 </body>
+
 </html>
