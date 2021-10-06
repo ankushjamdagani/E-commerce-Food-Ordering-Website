@@ -60,65 +60,6 @@ function toggleMenu(str){
     else
         strElem.style.display = "block";
 }
-/*
-
-function signInMenu() {
-
-    var signIn = document.querySelector("#sign-in");
-
-    if (signIn.style.display === "block")
-        signIn.style.display = "none";
-    else
-        signIn.style.display = "block";
-}
-
-function toggleDropdown(str) {
-
-    var strElem = document.getElementById(str).classList.toggle('show');
-}
-*/
-
-
-/*
-window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn-click')) {
-        var dropdowns = document.getElementsByClassName('dropdown-menu');
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.children[1].classList.contains('show')) {
-                openDropdown.children[1].classList.remove('show');
-            }
-        }
-    }
-}
-*/
-/*
-window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn-click')) {
-        var dropdowns = document.getElementsByClassName('dropdown-content');
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
-    }
-    else {
-        var id = event.target.getAttribute('id');
-
-        var dropdowns = document.getElementsByClassName('dropdown-content');
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (id != openDropdown.getAttribute('id') && openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
-    }
-}
-*/
 
 function handleFileSelect(evt) {
 
