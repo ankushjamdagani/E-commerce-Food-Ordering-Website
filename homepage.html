@@ -1,18 +1,20 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Welcome Hisar || Explore Hisar</title>
-<link rel="stylesheet" type="text/css" href="css/main1.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welcome Hisar || Explore Hisar</title>
+    <link rel="stylesheet" type="text/css" href="css/main1.css">
 </head>
+
 <body>
-	<div id="wrapper">
-    	<div id="header">
-			<a id="toggle-btn" class="header-block" href="javascript:void(0);" onclick="toggleMenu()">
+    <div id="wrapper">
+        <div id="header">
+            <a id="toggle-btn" class="header-block" href="javascript:void(0);" onclick="toggleMenu()">
                 &#9776;<span class="show-on-small pull-right" id="menu-text">Menu</span></a>
             <nav id="main-nav" class="default-hidden full-modal-box">
-                <a  href="javascript:void(0);" class="cross hide-on-small" onclick="toggleMenu()">&times;</a>
+                <a href="javascript:void(0);" class="cross hide-on-small" onclick="toggleMenu()">&times;</a>
                 <div class="absolute-vertical-center horizontal-center nav-style default-pos">
                     <ul>
                         <li>
@@ -30,7 +32,7 @@
                         <li>
                             <a href="javascript:void(0);">Policy</a>
                         </li>
-                    </ul>    
+                    </ul>
                 </div>
 
             </nav>
@@ -63,36 +65,37 @@
             
         </nav>-->
         <div id="sign-in" class="default-hidden full-modal-box">
-        	<a href="javascript:void(0);" class="cross hide-on-small" onclick="signInMenu()">&times;</a>
+            <a href="javascript:void(0);" class="cross hide-on-small" onclick="signInMenu()">&times;</a>
             <form id="sign-in-form" class="absolute-vertical-center horizontal-center default-pos">
-                <fieldset><!--
+                <fieldset>
+                    <!--
                     <label for="username" class="">Username</label>-->
                     <br>
-                    <input type="text" placeholder="enter username" name="username"  class="text-field"/>
+                    <input type="text" placeholder="enter username" name="username" class="text-field" />
                     <br>
                     <!--<label for="password" class="" >Password</label>--><br>
-                    <input type="password" placeholder="enter password" name="password" class="text-field"/>
+                    <input type="password" placeholder="enter password" name="password" class="text-field" />
                     <br>
                     <input type="button" name="sign-up" value="sign up" id="sign-up-btn" class="sign-in-ctrls" />
                     <input type="submit" name="sign in" id="log-in-btn" value="log in" class="sign-in-ctrls" />
-                    <a id="sign-in-forgot" href="javascript:void(0);">Forgot password?</a>  
+                    <a id="sign-in-forgot" href="javascript:void(0);">Forgot password?</a>
                 </fieldset>
-                
+
             </form>
         </div>
         <div id="content">
             <article id="fixed-search">
                 <div id="search-container">
                     <form class="horizontal-center">
-                    <input type="search" name="main-search" placeholder="search..." autofocus />
-                    <select name="search-domain">
-                        <option selected>choose domain</option>
-                        <option>Restaurant</option>
-                        <option>Venue</option>
-                        <option>Hotels</option>
-                    </select>
-                    <input type="submit" name="search-icon" value="SEARCH" />
-                </form>    
+                        <input type="search" name="main-search" placeholder="search..." autofocus />
+                        <select name="search-domain">
+                            <option selected>choose domain</option>
+                            <option>Restaurant</option>
+                            <option>Venue</option>
+                            <option>Hotels</option>
+                        </select>
+                        <input type="submit" name="search-icon" value="SEARCH" />
+                    </form>
                 </div>
             </article>
             <article id="bg-slide-wrapper">
@@ -124,9 +127,9 @@
                             <h1>Data 4</h1>
                             <p>data 4 description</p>
                         </div>
-                    </div>    
+                    </div>
                 </div>
-                
+
                 <div id="slider-controls" class="">
                     <button onclick="goSlide('0')" class="active-slide" />
                     <button onclick="goSlide('25')" />
@@ -144,82 +147,78 @@
             <p id="copyright">&nbsp;Explore Hisar &copy; 2016 All rights reserved.</p>
         </footer>
     </div>
-    
+
     <script>
-        function toggleMenu()
-        {
+        function toggleMenu() {
             var mainNav = document.querySelector("#main-nav");
-            if(mainNav.style.display == "block")
+            if (mainNav.style.display == "block")
                 mainNav.style.display = "none";
             else
                 mainNav.style.display = "block";
         }
-        
-        function signInMenu()
-        {
+
+        function signInMenu() {
             var signIn = document.querySelector("#sign-in");
-            
-            if(signIn.style.display == "block")
+
+            if (signIn.style.display == "block")
                 signIn.style.display = "none";
             else
                 signIn.style.display = "block";
         }
-        
+
         var timeOutId;
         var slidePos = 0;
         var sliderContainer = document.getElementById("bg-slide-container");
-        
+
         function resetTimer() {
             window.clearInterval(timeOutId);
             startTimer();
         }
-        
-        function nextSlide()
-        {
-            sliderContainer.style.left = "-"+(slidePos*4)+"%";
-            
+
+        function nextSlide() {
+            sliderContainer.style.left = "-" + (slidePos * 4) + "%";
+
             var childs = document.getElementById("slider-controls").children;
-            
-            for(var j=0; j < childs.length; j++) {
+
+            for (var j = 0; j < childs.length; j++) {
                 childs[j].classList.remove("active-slide");
             }
-            
-            childs[slidePos/25].classList.add("active-slide");
-            
-            console.log("before: "+slidePos);
+
+            childs[slidePos / 25].classList.add("active-slide");
+
+            console.log("before: " + slidePos);
             slidePos = parseInt(slidePos) + 25;
-            
-            if(slidePos >= 100)
+
+            if (slidePos >= 100)
                 slidePos = 0;
-            
-            console.log("after 2: "+slidePos);
+
+            console.log("after 2: " + slidePos);
         }
-        
-        function startTimer()
-        {
+
+        function startTimer() {
             timeOutId = window.setInterval(nextSlide, 5000);
         }
-        
+
         startTimer()
-        
-        function goSlide(pos)
-        {
+
+        function goSlide(pos) {
             slidePos = pos;
-            
+
             nextSlide();
             resetTimer();
-/*            var sliderContainer = document.getElementById("bg-slide-container");
-            
-            sliderContainer.style.left = "-"+(pos)+"%";
-            var childs = document.getElementById("slider-controls").children;
-            
-            for(var j=0; j < childs.length; j++) {
-                childs[j].classList.remove("active-slide");
-            }
-            
-            childs[pos/25].classList.add("active-slide");*/
+            /*            var sliderContainer = document.getElementById("bg-slide-container");
+                        
+                        sliderContainer.style.left = "-"+(pos)+"%";
+                        var childs = document.getElementById("slider-controls").children;
+                        
+                        for(var j=0; j < childs.length; j++) {
+                            childs[j].classList.remove("active-slide");
+                        }
+                        
+                        childs[pos/25].classList.add("active-slide");*/
         }
-        
+
     </script>
 </body>
+
 </html>

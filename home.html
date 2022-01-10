@@ -1,18 +1,19 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="css/reset.css" type="text/css">
-<link rel="stylesheet" href="css/order.css" type="text/css">
-<link rel="stylesheet" type="text/css" href="css/default1.css">
-<link rel="stylesheet" href="fonts/font-awesome-4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="css/home.css">
-<title>Order</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/order.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/default1.css">
+    <link rel="stylesheet" href="fonts/font-awesome-4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <title>Order</title>
 </head>
 
 <body>
-	<div id="wrapper">
+    <div id="wrapper">
         <aside id="sidebar">
             <ul id="nav-list">
                 <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
@@ -25,11 +26,14 @@
 
         <header id="sticky-bar" class="clearfix">
             <a href="javascript:void(0);" onclick="hideSidebar()" id="toggle-btn" class="sticky-block">&equiv;</a>
-            
-            <a href="javascript:void(0);" id="logo" class="sticky-block"><span style="font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#FB9E07">eh</span> <span class="hide-on-xsmall">Explore H!sar</span></a>
+
+            <a href="javascript:void(0);" id="logo" class="sticky-block"><span
+                    style="font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#FB9E07">eh</span>
+                <span class="hide-on-xsmall">Explore H!sar</span></a>
 
             <div id="site-domain" class="dropdown-menu sticky-block domain-dropbtn">
-                <button><span class="hide-on-small">choose domain&nbsp;&nbsp;</span><span id="dropdown-bracket"><i class="fa fa-chevron-down"></i></span></button>
+                <button><span class="hide-on-small">choose domain&nbsp;&nbsp;</span><span id="dropdown-bracket"><i
+                            class="fa fa-chevron-down"></i></span></button>
                 <ul class="default-hidden dropdown-content">
                     <li><a href="#">Restaurant</a></li>
                     <li><a href="#">Venue</a></li>
@@ -37,13 +41,17 @@
                 </ul>
             </div>
 
-            <a href="javascript:void(0);" class="sticky-block sticky-btn hide-on-small" id="search-btn" onclick="toggleMenu('sticky-search')"><i class="fa fa-search"></i></a>
-            
-            <a href="javascript:void(0);" class="sticky-block sticky-btn" id="sign-in-btn" onclick="toggleMenu('sign-in')"><i class="fa fa-user"></i><i class="hide-on-small">&nbsp;&nbsp;sign in</i></a>
-            
-            <article id="sticky-search"  class="default-hidden dropdown-content">
-                <a href="javascript:void(0);" id="close-search" class="cross cross-light hide-on-small" onclick="toggleMenu('sticky-search')"><i class="fa fa-close"></i></a>
-                
+            <a href="javascript:void(0);" class="sticky-block sticky-btn hide-on-small" id="search-btn"
+                onclick="toggleMenu('sticky-search')"><i class="fa fa-search"></i></a>
+
+            <a href="javascript:void(0);" class="sticky-block sticky-btn" id="sign-in-btn"
+                onclick="toggleMenu('sign-in')"><i class="fa fa-user"></i><i class="hide-on-small">&nbsp;&nbsp;sign
+                    in</i></a>
+
+            <article id="sticky-search" class="default-hidden dropdown-content">
+                <a href="javascript:void(0);" id="close-search" class="cross cross-light hide-on-small"
+                    onclick="toggleMenu('sticky-search')"><i class="fa fa-close"></i></a>
+
                 <section id="search-bar-container" class="hide-on-small">
                     <form id="search-bar" action="self" method="get">
                         <input type="search" name="search" id="main-search" placeholder="search...">
@@ -52,7 +60,8 @@
                             <option value="restaurant">restaurant</option>
                             <option value="venue">venue</option>
                             <option value="hotel">hotel</option>
-                        </select><!--
+                        </select>
+                        <!--
                         <input type="submit" value="search" id="search-icon">-->
                         <button type="submit" id="search-icon"><i class="fa fa-search"></i></button>
                     </form>
@@ -62,59 +71,62 @@
 
         <article id="sign-in" class="modal-box">
             <form>
-                <a href="javascript:void(0);" class="cross cross-dark" onclick="toggleMenu('sign-in')"><i class="fa fa-close"></i></a>
+                <a href="javascript:void(0);" class="cross cross-dark" onclick="toggleMenu('sign-in')"><i
+                        class="fa fa-close"></i></a>
                 <!--
                 <div id="sign-in-user">
                     <i class="fa fa-user"></i>
                 </div>-->
-                <div id="sign-in-using"><!--
+                <div id="sign-in-using">
+                    <!--
                     <p>sign in using </p>--><br>
                     <a href="#"><i class="fa fa-facebook"></i></a>
                     <a href="#"><i class="fa fa-google-plus"></i></a>
                     <a href="#"><i class="fa fa-twitter"></i></a>
                 </div>
-                
+
                 <div class="or-separator dark-separator">
                     <hr>
                     <span>or</span>
                 </div>
-                
+
                 <fieldset>
-                    <input type="text" placeholder="enter username" name="username"  class="text-field"/>
+                    <input type="text" placeholder="enter username" name="username" class="text-field" />
                     <br><br>
-                    <input type="password" placeholder="enter password" name="password" class="text-field"/>
+                    <input type="password" placeholder="enter password" name="password" class="text-field" />
                     <br>
-                    <input type="submit" name="sign in" id="log-in-btn" value="log in" class="sign-in-ctrls" />  
+                    <input type="submit" name="sign in" id="log-in-btn" value="log in" class="sign-in-ctrls" />
                     <br>
                     <a id="sign-in-forgot" href="javascript:void(0);">Forgot password?</a>
                 </fieldset>
-                
+
                 <div class="or-separator dark-separator">
                     <hr>
                     <span>or</span>
                 </div>
-                
+
                 <div id="sign-in-up">
                     <label>create new account</label>
                     <input type="button" name="sign-up" value="sign up" id="sign-up-btn" class="sign-in-ctrls" />
                 </div>
             </form>
         </article>
-        
+
         <section id="container">
             <section id="search-bar-container" class="show-on-small">
-                    <form id="search-bar" action="self" method="get">
-                        <input type="search" name="search" id="main-search" placeholder="search...">
-                        <select name="search-domain" id="search-domain">
-                            <option value="choose domain">choose domain</option>
-                            <option value="restaurant">restaurant</option>
-                            <option value="venue">venue</option>
-                            <option value="hotel">hotel</option>
-                        </select><!--
+                <form id="search-bar" action="self" method="get">
+                    <input type="search" name="search" id="main-search" placeholder="search...">
+                    <select name="search-domain" id="search-domain">
+                        <option value="choose domain">choose domain</option>
+                        <option value="restaurant">restaurant</option>
+                        <option value="venue">venue</option>
+                        <option value="hotel">hotel</option>
+                    </select>
+                    <!--
                         <input type="submit" value="search" id="search-icon">-->
-                        <button type="submit" id="search-icon"><i class="fa fa-search"></i></button>
-                    </form>
-                </section>
+                    <button type="submit" id="search-icon"><i class="fa fa-search"></i></button>
+                </form>
+            </section>
             <article id="bg-slide-wrapper">
                 <div id="bg-slide-container">
                     <div id="item1" class="slider-item">
@@ -144,9 +156,9 @@
                             <h1>About Us</h1>
                             <p>lorem ipsum lorem ipsum ipsum lorem ipsum ipsum</p>
                         </div>
-                    </div>    
+                    </div>
                 </div>
-                
+
                 <div id="slider-controls" class="">
                     <button onclick="goSlide('0')" class="active-slide" />
                     <button onclick="goSlide('25')" />
@@ -154,11 +166,11 @@
                     <button onclick="goSlide('75')" />
                 </div>
             </article>
-        </section>        
+        </section>
     </div>
-    
+
     <script src="scripts/default.js">
-        
+
     </script>
     <script>
         /*function toggleMenu()
@@ -169,7 +181,7 @@
             else
                 mainNav.style.display = "block";
         }*/
-        
+
         /*function signInMenu()
         {
             var signIn = document.querySelector("#sign-in");
@@ -183,64 +195,62 @@
         var timeOutId;
         var slidePos = 0;
         var sliderContainer = document.getElementById("bg-slide-container");
-        
+
         var shit = function starting() {
             toggleMenu("sticky-search");
         }();
-        
+
         function resetTimer() {
             window.clearInterval(timeOutId);
             startTimer();
         }
-        
-        function nextSlide()
-        {
-            sliderContainer.style.left = "-"+(slidePos*4)+"%";
-            
+
+        function nextSlide() {
+            sliderContainer.style.left = "-" + (slidePos * 4) + "%";
+
             var childs = document.getElementById("slider-controls").children;
-            
-            for(var j=0; j < childs.length; j++) {
+
+            for (var j = 0; j < childs.length; j++) {
                 childs[j].classList.remove("active-slide");
             }
-            
-            childs[slidePos/25].classList.add("active-slide");
-            
-            console.log("before: "+slidePos);
+
+            childs[slidePos / 25].classList.add("active-slide");
+
+            console.log("before: " + slidePos);
             slidePos = parseInt(slidePos) + 25;
-            
-            if(slidePos >= 100)
+
+            if (slidePos >= 100)
                 slidePos = 0;
-            
-            console.log("after 2: "+slidePos);
+
+            console.log("after 2: " + slidePos);
         }
-        
-        function startTimer()
-        {
+
+        function startTimer() {
             timeOutId = window.setInterval(nextSlide, 5000);
         }
-        
+
         startTimer()
-        
-        function goSlide(pos)
-        {
+
+        function goSlide(pos) {
             slidePos = pos;
-            
+
             nextSlide();
             resetTimer();
-/*            var sliderContainer = document.getElementById("bg-slide-container");
-            
-            sliderContainer.style.left = "-"+(pos)+"%";
-            var childs = document.getElementById("slider-controls").children;
-            
-            for(var j=0; j < childs.length; j++) {
-                childs[j].classList.remove("active-slide");
-            }
-            
-            childs[pos/25].classList.add("active-slide");*/
+            /*            var sliderContainer = document.getElementById("bg-slide-container");
+                        
+                        sliderContainer.style.left = "-"+(pos)+"%";
+                        var childs = document.getElementById("slider-controls").children;
+                        
+                        for(var j=0; j < childs.length; j++) {
+                            childs[j].classList.remove("active-slide");
+                        }
+                        
+                        childs[pos/25].classList.add("active-slide");*/
         }
-        
+
     </script>
     <!--
     <audio src="../2.mp3" autoplay />-->
 </body>
+
 </html>

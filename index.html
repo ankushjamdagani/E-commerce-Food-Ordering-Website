@@ -1,37 +1,42 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="css/reset.css" type="text/css" />
-<link rel="stylesheet" type="text/css" href="css/default1.css" />
-<link rel="stylesheet" href="fonts/font-awesome-4.5.0/css/font-awesome.min.css" />
 
-<title>Demo || Explore Hisar</title>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/reset.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/default1.css" />
+    <link rel="stylesheet" href="fonts/font-awesome-4.5.0/css/font-awesome.min.css" />
+
+    <title>Demo || Explore Hisar</title>
 </head>
 
 <body>
     <Style>
-        
-        body, #wrapper {
+        body,
+        #wrapper {
             background: #9a0000;
             height: calc(100% - 52px);
             background: #a73737;
-            background: -webkit-linear-gradient(to left, #EFEFBB , #D4D3DD);
-            background: linear-gradient(to left, #EFEFBB , #D4D3DD); 
+            background: -webkit-linear-gradient(to left, #EFEFBB, #D4D3DD);
+            background: linear-gradient(to left, #EFEFBB, #D4D3DD);
         }
-        
-        #pageView{
+
+        #pageView {
             margin-top: 50px;
             height: calc(100%);
         }
-        
+
         #sticky-bar {
             background: #383838;
         }
-        
+
         #portifolio {
-            display: inline-block; color: #ffffff; font-size: 24px; padding: 15px; margin-left: 10px;
+            display: inline-block;
+            color: #ffffff;
+            font-size: 24px;
+            padding: 15px;
+            margin-left: 10px;
             font-variant: small-caps;
             background: #eb4800;
             float: left;
@@ -39,20 +44,20 @@
             box-shadow: 1px 1px 1px black;
             transition: all .25s;
         }
-        
+
         #portifolio:hover {
             background: #ff4e00;
             padding-bottom: 22px;
         }
-        
+
         #pageViewList {
             text-align: center;
         }
-        
+
         #pageViewList li {
             display: inline;
         }
-        
+
         #pageViewList li a {
             background: #f1f1f1;
             border-radius: 2px;
@@ -63,12 +68,12 @@
             padding: 10px;
             transition: all .2s;
         }
-        
+
         #pageViewList li a:hover {
             background: #5c5c5c;
             color: #f1f1f1;
         }
-        
+
         .pageViewDropDown {
             background: #e1e1e1;
             border-radius: 2px;
@@ -76,158 +81,171 @@
             margin: 8px;
             padding: 5px;
         }
-        
-        
+
+
         .info-btn {
             border-radius: 4px;
-            color: #f1f1f1!important;
+            color: #f1f1f1 !important;
             margin: 5px;
             padding: 9px;
             float: right;
-            background: #eb7600!important;
+            background: #eb7600 !important;
         }
-        
+
         .info-btn:hover {
-            color: #eb7600!important;
-            background: #f1f1f1!important;
+            color: #eb7600 !important;
+            background: #f1f1f1 !important;
         }
-        
+
         #pageInfoBox {
             background: rgba(204, 204, 204, 0.41);
             position: absolute;
             transform: translateY(-100%);
         }
-        
-        
+
+
         #information {
             text-align: left;
             padding: 10px;
         }
-        
+
         #information li {
             border-bottom: solid 1px #464646;
             font-size: 14px;
             padding: 10px;
         }
-        
+
         #information i {
             display: inline-block;
             padding: 5px;
         }
-        
+
         .spanFull {
             width: 100%;
             height: calc(100% + 50px);
         }
-        
-        
     </Style>
-    
-	<div id="wrapper">
-    	<header id="sticky-bar" class="clearfix">
-            <a id="portifolio" href="http://ankushjamdagani.blogspot.in/"><i style="color: #f1f1f1;">&lt;</i> Ankush Jamdagani <i style="color: #f1f1f1">/&gt;</i></a>
-            
-            <a class="info-btn show-on-small" href="javascript:void(0);" onclick="toggleMessage('pageInfoBox')"><i class="fa fa-info"></i></a>
-            
+
+    <div id="wrapper">
+        <header id="sticky-bar" class="clearfix">
+            <a id="portifolio" href="http://ankushjamdagani.blogspot.in/"><i style="color: #f1f1f1;">&lt;</i> Ankush
+                Jamdagani <i style="color: #f1f1f1">/&gt;</i></a>
+
+            <a class="info-btn show-on-small" href="javascript:void(0);" onclick="toggleMessage('pageInfoBox')"><i
+                    class="fa fa-info"></i></a>
+
             <div class="pageViewDropDown dropdown-menu domain-dropbtn show-on-small">
-                <button><span>Page&nbsp;&nbsp;</span><span id="dropdown-bracket"><i style="color: #000;" class="fa fa-chevron-down"></i></span></button>
-                
+                <button><span>Page&nbsp;&nbsp;</span><span id="dropdown-bracket"><i style="color: #000;"
+                            class="fa fa-chevron-down"></i></span></button>
+
                 <ul class="default-hidden dropdown-content">
                     <li>
-                        <a href="home.html" target="page_frame" >Home</a>
+                        <a href="home.html" target="page_frame">Home</a>
                     </li>
                     <li>
-                        <a href="search/index.html" target="page_frame" >Search</a>
+                        <a href="search/index.html" target="page_frame">Search</a>
                     </li>
                     <li>
-                        <a href="view/index.html" target="page_frame" >View</a>
+                        <a href="view/index.html" target="page_frame">View</a>
                     </li>
                     <li>
-                        <a href="order/index.html" target="page_frame" >Order</a>
+                        <a href="order/index.html" target="page_frame">Order</a>
                     </li>
                     <li>
-                        <a href="user/register.html" target="page_frame" >Register</a>
+                        <a href="user/register.html" target="page_frame">Register</a>
                     </li>
                 </ul>
             </div>
-            
+
             <ul id="pageViewList" class="hide-on-small">
                 <li>
-                    <a href="home.html" target="page_frame" >Home</a>
+                    <a href="home.html" target="page_frame">Home</a>
                 </li>
                 <li>
-                    <a href="search/index.html" target="page_frame" >Search</a>
+                    <a href="search/index.html" target="page_frame">Search</a>
                 </li>
                 <li>
-                    <a href="view/index.html" target="page_frame" >View</a>
+                    <a href="view/index.html" target="page_frame">View</a>
                 </li>
                 <li>
-                    <a href="order/index.html" target="page_frame" >Order</a>
+                    <a href="order/index.html" target="page_frame">Order</a>
                 </li>
                 <li>
-                    <a href="user/register.html" target="page_frame" >Register</a>
+                    <a href="user/register.html" target="page_frame">Register</a>
                 </li>
                 <li>
-                    <a class="info-btn" href="javascript:void(0);" onclick="toggleMessage('pageInfoBox')"><i class="fa fa-info"></i></a>
+                    <a class="info-btn" href="javascript:void(0);" onclick="toggleMessage('pageInfoBox')"><i
+                            class="fa fa-info"></i></a>
                 </li>
             </ul>
-            
-            
+
+
         </header>
-        
+
         <div id="pageView">
             <iframe src="home.html" name="page_frame" class="spanFull"></iframe>
-            <div id="pageInfoBox" class="spanFull modal-Box" >
+            <div id="pageInfoBox" class="spanFull modal-Box">
                 <article id="sign-in">
                     <form>
-                        <a href="javascript:void(0);" class="cross cross-dark" onclick="toggleMessage('pageInfoBox')"><i class="fa fa-close"></i></a>
-                        
+                        <a href="javascript:void(0);" class="cross cross-dark" onclick="toggleMessage('pageInfoBox')"><i
+                                class="fa fa-close"></i></a>
+
                         <div style="text-align: center;">
-                            <p style="padding: 20px; font-size: 32px; color: #ffff00;"><i style="font-size: 32px;" class="fa fa-exclamation"></i> Hello World :)
+                            <p style="padding: 20px; font-size: 32px; color: #ffff00;"><i style="font-size: 32px;"
+                                    class="fa fa-exclamation"></i> Hello World :)
                             </p>
                         </div>
-                        
+
                         <ul id="information">
-                            <li><i class="fa fa-plus"></i>This is an online food ordering, restaurant searching and venue booking website and it is under construction.</li>
-                            <li><i class="fa fa-plus"></i>It is a responsive website. So feel free to resize the browser.</li>
+                            <li><i class="fa fa-plus"></i>This is an online food ordering, restaurant searching and
+                                venue booking website and it is under construction.</li>
+                            <li><i class="fa fa-plus"></i>It is a responsive website. So feel free to resize the
+                                browser.</li>
                             <li><i class="fa fa-plus"></i>The mobile toggle menu on few pages is empty.</li>
-                            <li><i class="fa fa-plus"></i>I am working on the backend right now as we speak. So search n all that kind of stuff won't work.</li>
-                            <li><i class="fa fa-plus"></i>In case of any queries and improvements visit my portifolio <a style="text-decoration: underline; font-variant: small-caps; color: #00ffa7; background: #1a1a1a; display: inline-block; padding: 5px;" href="http://ankushjamdagani.blogspot.in/">Ankush Jamdagani</a> or mail me  <a style="text-decoration: underline; font-variant: small-caps; color: #00ffa7; display: inline-block; padding: 5px;" href="mailto:anqush.jamdagani@gmail.com">@Ankush Jamdagani</a>. Feel free to judge!! :D </li>
+                            <li><i class="fa fa-plus"></i>I am working on the backend right now as we speak. So search n
+                                all that kind of stuff won't work.</li>
+                            <li><i class="fa fa-plus"></i>In case of any queries and improvements visit my portifolio <a
+                                    style="text-decoration: underline; font-variant: small-caps; color: #00ffa7; background: #1a1a1a; display: inline-block; padding: 5px;"
+                                    href="http://ankushjamdagani.blogspot.in/">Ankush Jamdagani</a> or mail me <a
+                                    style="text-decoration: underline; font-variant: small-caps; color: #00ffa7; display: inline-block; padding: 5px;"
+                                    href="mailto:anqush.jamdagani@gmail.com">@Ankush Jamdagani</a>. Feel free to judge!!
+                                :D </li>
                         </ul>
-                        
+
                     </form>
                 </article>
             </div>
         </div>
 
     </div>
-    
-    <script >
-        
+
+    <script>
+
         var isHiddenSidebar = true;
-        
+
         // put optionally on the pages where you want the sidebar open by default
-        
+
         //var a = toggleMenu('pageInfoBox');
-        
+
         isHiddenSidebar = function setBool() {
             toggleMessage("pageInfoBox");
-            
+
             if (innerWidth >= 1280)
                 isHiddenSidebar = false;
             return isHiddenSidebar;
         }();
-        
-        function toggleMessage(str){
-            var strElem = document.querySelector('#'+str);
-            
+
+        function toggleMessage(str) {
+            var strElem = document.querySelector('#' + str);
+
             if (strElem.style.display === "block")
                 strElem.style.display = "none";
             else
                 strElem.style.display = "block";
         }
     </script>
-    
+
     <script src="scripts/default.js"></script>
 </body>
+
 </html>
